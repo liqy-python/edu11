@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'home',
     'users',
     'course',
+    'cart',
 ]
 
 MIDDLEWARE = [
@@ -213,7 +214,7 @@ AUTH_USER_MODEL = 'users.UserInfo'
 # jwt配置
 JWT_AUTH = {
     # 有效时间
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=300),
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=30000*60),
     # 自定义jwt返回值的格式方法
     'JWT_RESPONSE_PAYLOAD_HANDLER': 'users.utils.jwt_response_payload_handler',
 }
@@ -247,8 +248,17 @@ CACHES = {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
     },
+    # 购物车的储存位置
+    "cart": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/9",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
 }
 
+# 编辑器的配置
 KEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'full',  # 展示哪些工具栏

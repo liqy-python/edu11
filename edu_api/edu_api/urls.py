@@ -30,6 +30,7 @@ urlpatterns = [
     path("home/", include("home.urls")),
     path("user/", include("users.urls")),
     path("course/", include("course.urls")),
+    path("cart/", include("cart.urls")),
     path("ckeditor/", include("ckeditor_uploader.urls")),
 
 ]

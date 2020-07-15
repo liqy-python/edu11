@@ -3,9 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store/index'
 
 // axios配置
 import axios from "axios";
+
 Vue.prototype.$axios = axios;
 
 //element-ui
@@ -14,6 +16,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.use(Element);
 import settings from "./settings";
+
 Vue.prototype.$settings = settings;
 Vue.config.productionTip = false
 
@@ -31,8 +34,9 @@ Vue.use(VideoPlayer);
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+    el: '#app',
+    router,
+    store,
+    components: {App},
+    template: '<App/>'
 })

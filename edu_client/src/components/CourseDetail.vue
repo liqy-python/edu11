@@ -27,7 +27,7 @@
                             <button class="buy-now">立即购买</button>
                             <button class="free">免费试学</button>
                         </div>
-                        <div class="add-cart"><img src="/static/image/cart.svg" alt="">加入购物车</div>
+                        <div class="add-cart" @click="addCart"><img src="/static/image/cart.svg" alt="">加入购物车</div>
                     </div>
                 </div>
             </div>
@@ -141,6 +141,7 @@
                     this.alert("获取数据失败")
                 })
             },
+
             get_course_chapter() {
                 this.$axios.get(`${this.$settings.HOST}course/chapter/`,{
                     params:{
@@ -150,6 +151,41 @@
                     this.chapter_list = res.data;
                 }).catch(error => {
                     this.alert("获取章节失败")
+                })
+            },
+
+            // 检查用户是否登录
+            check_user_login(){
+                let token = localStorage.user_token || sessionStorage.user_token;
+                if (!token){
+                    let self = this;
+                    this.$confirm("对不起，请登录后再添加购物车",{
+                        callback(){
+                            self.$router.push("/user/login/");
+                        }
+                    });
+                    return false;
+                }
+                return token;
+            },
+
+            //  添加商品到购物车，用户必须登录
+            addCart() {
+                let token = this.check_user_login();
+                this.$axios.post(`${this.$settings.HOST}cart/option/`,{
+                        course_id:this.$route.query.id,
+                },{
+                    headers:{
+                        "Authorization": "jwt " +token,
+                    }
+                }).then(res => {
+                    this.$message.success(res.data.message);
+                    this.$store.commit("add_cart",res.data.cart_length);
+                    console.log(res.data)
+
+                }).catch(error => {
+                    console.log(error.response);
+
                 })
             },
         },

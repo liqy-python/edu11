@@ -1,1 +1,24 @@
 # Created by .ignore support plugin (hsz.mobi)
+edu_api/apps/cart/__init__.py
+edu_api/apps/cart/__pycache__/
+edu_api/apps/cart/admin.py
+edu_api/apps/cart/apps.py
+edu_api/apps/cart/migrations/
+edu_api/apps/cart/models.py
+edu_api/apps/cart/tests.py
+edu_api/apps/cart/views.py
+edu_api/media/2020/07/15/
+edu_api/media/afa8390a067b7d0410a60a47e0d7c686.jpg
+edu_api/media/course/afa8390a067b7d0410a60a47e0d7c686.jpg
+edu_api/media/course/afa8390a067b7d0410a60a47e0d7c686_i1D1nfU.jpg
+edu_api/media/video/05cacb4e02f9d9e_278Lf23.mp4
+edu_api/media/video/05cacb4e02f9d9e_2HVjIMD.mp4
+edu_api/media/video/05cacb4e02f9d9e_A5o9O6I.mp4
+edu_api/media/video/05cacb4e02f9d9e_JXgLpaF.mp4
+edu_api/media/video/05cacb4e02f9d9e_RSRqhLh.mp4
+edu_api/media/video/05cacb4e02f9d9e_RqD16Be.mp4
+edu_api/media/video/05cacb4e02f9d9e_W4zZTLs.mp4
+edu_api/media/video/05cacb4e02f9d9e_u1QdkcE.mp4
+edu_api/media/video/05cacb4e02f9d9e_wHsjUXN.mp4
+edu_api/media/video/05cacb4e02f9d9e_wUPgjEx.mp4
+edu_api/media/video/05cacb4e02f9d9e_xbq85jS.mp4
