@@ -7,20 +7,34 @@
                 </div>
                 <ul class="nav full-left" v-for="(nav,index) in Nav_list" :key="index">
                     <li v-if="nav.position == '1'">
-                        <span>{{nav.title}}</span>
+                        <span><router-link :to="nav.link">{{nav.title}}</router-link></span>
                     </li>
                 </ul>
-                <div class="login-bar full-right">
+                <!--          用户存在      -->
+                <div class="login-bar full-right" v-if="token">
                     <div class="shop-cart full-left">
                         <img src="/static/image/" alt="">
                         <span><router-link to="/cart">购物车</router-link></span>
                     </div>
                     <div class="login-box full-left">
-                        <router-link to="/home/login/">登录</router-link>
+                        <router-link to="/user/login/">个人中心</router-link>
                         &nbsp;|&nbsp;
-                        <span>注册</span>
+                        <span @click="quit">退出登录</span>
                     </div>
                 </div>
+                <!--          用户不存在      -->
+                <div class="login-bar full-right" v-else>
+                    <div class="shop-cart full-left">
+                        <img src="/static/image/" alt="">
+                        <span><router-link to="/cart">购物车</router-link></span>
+                    </div>
+                    <div class="login-box full-left">
+                        <router-link to="/user/login/">登录</router-link>
+                        &nbsp;|&nbsp;
+                        <router-link to="/user/register/">注册</router-link>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -32,9 +46,14 @@
         data() {
             return {
                 Nav_list: [],
+                token: "",
             }
         },
         methods: {
+            get_token() {
+                this.token = localStorage.user_token || sessionStorage.user_token;
+                // return this.token;
+            },
             get_all_Nav() {
                 this.$axios({
                     url: this.$settings.HOST + 'home/nav/',
@@ -47,10 +66,17 @@
                     console.log(error);
                 })
             },
+            quit(){
+                localStorage.clear();
+                sessionStorage.clear();
+                this.$router.push("/user/login/")
+
+            },
         },
         // 在当前页面渲染之前将数据获取并赋值给 data
         created() {
             this.get_all_Nav();
+            this.get_token()
         }
     }
 </script>

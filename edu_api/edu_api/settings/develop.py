@@ -9,9 +9,10 @@ https://docs.djangoproject.com/en/2.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
-
+import datetime
 import os
 import sys
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -25,8 +26,7 @@ SECRET_KEY = '11&j5*12$r6u#$lsr!o1km8yr5yd+0#&d8jm$=zvgwa#l@1v9v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['api.baizhishop.com','www.baizhishop.com']
-
+ALLOWED_HOSTS = ['api.baizhishop.com', 'www.baizhishop.com']
 
 # Application definition
 
@@ -39,11 +39,20 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
-    'home',
+
     # x admin配置
     'xadmin',
     'crispy_forms',
     'reversion',
+    'django_filters',
+
+    # 富文本编辑器配置
+    'ckeditor',  # 富文本编辑器
+    'ckeditor_uploader',  # 富文本编辑器的上传模块
+
+    'home',
+    'users',
+    'course',
 ]
 
 MIDDLEWARE = [
@@ -78,21 +87,19 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'edu_api.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'edu_api',
+        'NAME': 'bz_edu',
         'HOST': "localhost",
         'USER': "root",
         "PASSWORD": '123456',
         "PORT": 3306,
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -112,7 +119,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
@@ -125,7 +131,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
@@ -195,4 +200,60 @@ LOGGING = {
 REST_FRAMEWORK = {
     # 全局异常配置
     "EXCEPTION_HANDLER": "utils.exceptions.exception_handler",
+    # 添加认证方式
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ],
 }
+
+AUTH_USER_MODEL = 'users.UserInfo'
+
+# jwt配置
+JWT_AUTH = {
+    # 有效时间
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=300),
+    # 自定义jwt返回值的格式方法
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'users.utils.jwt_response_payload_handler',
+}
+
+# 自定义多条件登录
+AUTHENTICATION_BACKENDS = [
+    'users.utils.UserAuthBackend',
+]
+
+# django 连接redis设置
+
+CACHES = {
+    # 默认库
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        # 连接的redis所在服务的端口以及ip
+        "LOCATION": "redis://127.0.0.1:6379/0",
+        # 使用客户端的方式
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    },
+
+    # 验证码储存位置
+    "sms_code": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        # 连接的redis所在服务的端口以及ip
+        "LOCATION": "redis://127.0.0.1:6379/10",
+        # 使用客户端的方式
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    },
+}
+
+KEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',  # 展示哪些工具栏
+        'height': 300,  # 编辑器的高度
+        'width': 300,
+    },
+}
+CKEDITOR_UPLOAD_PATH = ''
