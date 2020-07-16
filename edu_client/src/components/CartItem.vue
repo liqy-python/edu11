@@ -8,15 +8,16 @@
             <span><router-link :to="'/course/detail/'+course.id">{{course.name}}</router-link></span>
         </div>
         <div class="cart_column column_3">
-            <el-select v-model="expire" size="mini" placeholder="请选择购买有效期" class="my_el_select">
-                <el-option label="1个月有效" value="30" key="30"></el-option>
-                <el-option label="2个月有效" value="60" key="60"></el-option>
-                <el-option label="3个月有效" value="90" key="90"></el-option>
-                <el-option label="永久有效" value="10000" key="10000"></el-option>
+            <el-select v-model="course.expire_id" size="mini" placeholder="请选择购买有效期" class="my_el_select">
+                <el-option
+                    :label="item.expire_text" :value="item.id" :key="item.id" v-for="item in course.expire_list">
+                </el-option>
             </el-select>
         </div>
-        <div class="cart_column column_4">{{course.price.toFixed(2)}}</div>
-        <div class="cart_column column_4">删除</div>
+        <div class="cart_column column_4">{{course.real_price}}</div>
+<!--        <p v-for="index in course" :key="index"></p>-->
+        <div class="cart_column column_4" @click="del_cart(index)">删除</div>
+
     </div>
 </template>
 
@@ -24,37 +25,78 @@
     export default {
         name: "CartItem",
         //接受父组件的数据
-        props:["course"],
-        watch:{
-            'course.selected':function () {
+        props: ["course","index"],
+        watch: {
+            // 通过监测select的变化来改变当前的选中状态
+            'course.selected': function () {
                 this.change_select()
+            },
+            // 切换课程有效期
+            'course.expire_id': function () {
+                // 后台发送请求切换状态
+                this.change_expire()
             }
         },
-        data(){
-            return{
-                expire:"1",
+        data() {
+            return {
+                expire: "1",
             }
         },
-        methods:{
-            change_select(){
+        methods: {
+            // 状态切换
+            change_select() {
                 let token = localStorage.user_token || sessionStorage.user_token;
-                this.$axios.patch(`${this.$settings.HOST}cart/option/`,{
-                    selected:this.course.selected,
+                this.$axios.patch(`${this.$settings.HOST}cart/option/`, {
+                    selected: this.course.selected,
                     course_id: this.course.id,
-                },{
-                    headers:{
-                            "Authorization": "jwt " +token,
-                        }
+                }, {
+                    headers: {
+                        "Authorization": "jwt " + token,
+                    }
                 }).then(res => {
                     this.$message.success(res.data.message);
-                    // this.$store.commit("add_cart",res.data.cart_length);
                     console.log(res.data)
-
                 }).catch(error => {
                     console.log(error.response);
-
                 })
-            }
+            },
+            del_cart(index) {
+                let token = localStorage.user_token || sessionStorage.user_token;
+                this.$axios.delete(`${this.$settings.HOST}cart/option/`, {
+                    selected: this.course.selected,
+                    course_id: this.course.id,
+                }, {
+                    headers: {
+                        "Authorization": "jwt " + token,
+                    }
+                }).then(res => {
+                    this.$message.success(res.data.message);
+                    console.log(res.data);
+                    this.course.splice(index, 1)
+                }).catch(error => {
+                    console.log(error.response);
+                })
+            },
+
+            // 改变redis中的课程有效期
+            change_expire() {
+                let token = sessionStorage.user_token || localStorage.user_token;
+                this.$axios.put(`${this.$settings.HOST}cart/option/`, {
+                    expire_id: this.course.expire_id,
+                    course_id: this.course.id
+                }, {
+                    headers: {
+                        "Authorization": "jwt " + token,
+                    }
+                }).then(response => {
+                    console.log(response.data);
+                    // 更新切换有效期后课程的价格
+                    this.course.real_price = response.data.real_price;
+                    this.$message.success("切换有效期成功");
+                }).catch(error => {
+                    console.log(error);
+                })
+            },
 
         }
     }

@@ -33,25 +33,26 @@
     import CartItem from "./CartItem";
     import Header from "./common/Header";
     import Footer from "./common/Footer";
+
     export default {
         name: "Cart",
         created() {
             this.get_cart()
         },
-        data(){
-            return{
-                cart_list:[],
+        data() {
+            return {
+                cart_list: [],
             }
 
         },
-        methods:{
+        methods: {
             // 检查用户是否登录
-            check_user_login(){
+            check_user_login() {
                 let token = localStorage.user_token || sessionStorage.user_token;
-                if (!token){
+                if (!token) {
                     let self = this;
-                    this.$confirm("对不起，请登录后再添加购物车",{
-                        callback(){
+                    this.$confirm("对不起，请登录后再添加购物车", {
+                        callback() {
                             self.$router.push("/user/login/");
                         }
                     });
@@ -59,24 +60,24 @@
                 }
                 return token;
             },
-            get_cart(){
+            get_cart() {
                 let token = this.check_user_login();
-                this.$axios.get(`${this.$settings.HOST}cart/option/`,{
-                    headers:{
-                        "Authorization": "jwt " +token,
+                this.$axios.get(`${this.$settings.HOST}cart/option/`, {
+                    headers: {
+                        "Authorization": "jwt " + token,
                     }
                 }).then(res => {
                     console.log(res.data);
                     this.cart_list = res.data;
-                    this.$store.commit("add_cart",this.cart_list.length)
+                    this.$store.commit("add_cart", this.cart_list.length)
                 }).catch(error => {
                     console.log(error.response);
                 })
             },
 
         },
-        components:{
-            CartItem,Header,Footer
+        components: {
+            CartItem, Header, Footer
 
         }
     }

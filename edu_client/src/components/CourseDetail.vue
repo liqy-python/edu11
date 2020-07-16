@@ -12,14 +12,17 @@
                 </div>
                 <div class="wrap-right">
                     <h3 class="course-name">{{detail.name}}</h3>
-                    <p class="data">{{detail.students}}人在学&nbsp;&nbsp;&nbsp;&nbsp;课程总时长：<span>共{{detail.lessons}}课时/{{detail.lessons==detail.pub_lessons?'更新完成':`已更新${detail.pub_lessons}课时`}}</span>&nbsp;&nbsp;&nbsp;&nbsp;难度：{{detail.level_name}}</p>
+                    <p class="data">{{detail.students}}人在学&nbsp;&nbsp;&nbsp;&nbsp;课程总时长：<span>共{{detail.lessons}}课时/{{detail.lessons==detail.pub_lessons?'更新完成':`已更新${detail.pub_lessons}课时`}}</span>&nbsp;&nbsp;&nbsp;&nbsp;难度：{{detail.level_name}}
+                    </p>
                     <div class="sale-time">
-                        <p class="sale-type">限时免费</p>
-                        <p class="expire">距离结束：仅剩 110天 13小时 33分 <span class="second">08</span> 秒</p>
+                        <p class="sale-type">{{detail.discount_name}}</p>
+                        <p class="expire">距离结束：仅剩 {{parseInt(detail.active_time/(24*3600))}}天
+                            {{parseInt(detail.active_time/3600%24)}}小时 {{parseInt(detail.active_time/60%60)}}分 <span
+                                class="second">{{parseInt(detail.active_time%60)}}</span> 秒</p>
                     </div>
                     <p class="course-price">
                         <span>活动价</span>
-                        <span class="discount">¥0.00</span>
+                        <span class="discount">¥{{detail.real_price}}</span>
                         <span class="original">¥{{detail.price}}</span>
                     </p>
                     <div class="buy">
@@ -51,10 +54,12 @@
                             <p class="chapter-length">共{{chapter_list.length}}章 {{detail.lessons}}个课时</p>
                         </div>
                         <div class="chapter-item" v-for="chapter in chapter_list">
-                            <p class="chapter-title"><img src="/static/image/avatar1.svg" alt="">第{{chapter.chapter}}章·{{chapter.name}}</p>
+                            <p class="chapter-title"><img src="/static/image/avatar1.svg" alt="">第{{chapter.chapter}}章·{{chapter.name}}
+                            </p>
                             <ul class="lesson-list">
-                                <li class="lesson-item" v-for="(lesson,key) in chapter.coursesections" :key="id">
-                                    <p class="name"><span class="index">{{chapter.chapter}}-{{key+1}}</span> {{lesson.name}}<span class="free">{{lesson.free_trail}}</span>
+                                <li class="lesson-item" v-for="(lesson,key) in chapter.coursesections" :key="key">
+                                    <p class="name"><span class="index">{{chapter.chapter}}-{{key+1}}</span>
+                                        {{lesson.name}}<span class="free">{{lesson.free_trail}}</span>
                                     </p>
                                     <p class="time">07:30 <img src="/static/image/chapter-player.svg"></p>
                                     <button class="try">立即试学</button>
@@ -101,11 +106,11 @@
             return {
                 course_id: 0,
                 tabIndex: 2, // 当前选项卡显示的下标
-                id:'',
-                detail:{
-                    teacher:{}
+                id: '',
+                detail: {
+                    teacher: {}
                 },
-                chapter_list:[],
+                chapter_list: [],
                 playerOptions: {
                     playbackRates: [0.7, 1.0, 1.5, 2.0], // 播放速度
                     autoplay: false, //如果true,则自动播放
@@ -119,7 +124,7 @@
                         type: "video/mp4",
                         src: "http://img.ksbbs.com/asset/Mon_1703/05cacb4e02f9d9e.mp4" //你的视频地址（必填）  绑定自己的视频地址
                     }],
-                    poster: "../static/image/course-cover.jpeg", //视频封面图
+                    poster: "", //视频封面图
                     width: document.documentElement.clientWidth, // 默认视频全屏时的最大宽度
                     notSupportedMessage: '此视频暂无法播放，请稍后再试', //允许覆盖Video.js无法播放媒体源时显示的默认信息。
                 }
@@ -129,23 +134,35 @@
         methods: {
             // 获取课程信息
             get_detail_list() {
-                let id = this.$route.query.id
+                let id = this.$route.query.id;
                 this.$axios({
-                    url: this.$settings.HOST + 'course/detail/'+`${id}`,
+                    url: this.$settings.HOST + 'course/detail/' + `${id}`,
                     method: "get",
                 }).then(res => {
                     this.detail = res.data;
-                    // this.playerOptions.sources[0].src = res.data.course_video;
-                    // this.playerOptions.poster = res.data.course_img;
+                    // 播放的视频
+                    this.playerOptions.poster = res.data.course_img;
+                    this.playerOptions.sources[0].src = res.data.course_video;
+
+                    // 设置课程活动的倒计时
+                    if (this.detail.active_time > 0) {
+                        let timer = setInterval(() => {
+                            if (this.detail.active_time > 1) {
+                                this.detail.active_time -= 1
+                            } else {
+                                clearInterval(timer)
+                            }
+                        }, 1000)
+                    }
                 }).catch(error => {
-                    this.alert("获取数据失败")
+                    console.log("获取数据失败")
                 })
             },
-
+            // 获取章节以及对应的课时信息
             get_course_chapter() {
-                this.$axios.get(`${this.$settings.HOST}course/chapter/`,{
-                    params:{
-                        course:this.$route.query.id,
+                this.$axios.get(`${this.$settings.HOST}course/chapter/`, {
+                    params: {
+                        course: this.$route.query.id,
                     }
                 }).then(res => {
                     this.chapter_list = res.data;
@@ -155,12 +172,12 @@
             },
 
             // 检查用户是否登录
-            check_user_login(){
+            check_user_login() {
                 let token = localStorage.user_token || sessionStorage.user_token;
-                if (!token){
+                if (!token) {
                     let self = this;
-                    this.$confirm("对不起，请登录后再添加购物车",{
-                        callback(){
+                    this.$confirm("对不起，请登录后再添加购物车", {
+                        callback() {
                             self.$router.push("/user/login/");
                         }
                     });
@@ -172,15 +189,15 @@
             //  添加商品到购物车，用户必须登录
             addCart() {
                 let token = this.check_user_login();
-                this.$axios.post(`${this.$settings.HOST}cart/option/`,{
-                        course_id:this.$route.query.id,
-                },{
-                    headers:{
-                        "Authorization": "jwt " +token,
+                this.$axios.post(`${this.$settings.HOST}cart/option/`, {
+                    course_id: this.$route.query.id,
+                }, {
+                    headers: {
+                        "Authorization": "jwt " + token,
                     }
                 }).then(res => {
                     this.$message.success(res.data.message);
-                    this.$store.commit("add_cart",res.data.cart_length);
+                    this.$store.commit("add_cart", res.data.cart_length);
                     console.log(res.data)
 
                 }).catch(error => {

@@ -1,5 +1,5 @@
 <template>
-        <div class="course">
+    <div class="course">
         <Header></Header>
 
         <div class="main">
@@ -36,11 +36,11 @@
                     </div>
                     <div class="course-info">
                         <h3>
-<!--                             <router-link to="/course/detail/">{{course.name}}</router-link>-->
+                            <!--                             <router-link to="/course/detail/">{{course.name}}</router-link>-->
                             <a href="javascript:void (0)" @click="detail(course.id)">{{course.name}}</a>
                             <span><img src="/static/image/python.jpg" alt="">{{course.students}}人已加入学习</span>
                         </h3>
-                        <p class="teather-info">huxz 百知教育教学总监
+                        <p class="teather-info">Tom 百知教育教学总监
                             <span>共{{course.lessons}}课时/{{course.lessons==course.pub_lessons?'更新完成':`已更新${course.pub_lessons}课时`}}</span>
                         </p>
 
@@ -52,8 +52,8 @@
 
                         </ul>
                         <div class="pay-box">
-                            <span class="discount-type">限时免费</span>
-                            <span class="discount-price">￥0.00元</span>
+                            <span class="discount-type" v-if="course.discount_name">{{course.discount_name}}</span>
+                            <span class="discount-price">￥{{course.real_price.toFixed(2)}}元</span>
                             <span class="original-price">原价：{{course.price}}元</span>
                             <span class="buy-now">立即购买</span>
                         </div>
@@ -84,7 +84,7 @@
                 category_list: [],  // 分类列表
                 course_list: [],     //  课程列表
                 category: 0,
-                id:"",
+                id: "",
                 total: 0,   //  课程总数量
                 // course_category: "",    // 分类id
                 // 对数据进行过滤
@@ -186,11 +186,11 @@
                 this.get_course_list();
             },
             // 跳转到详情页
-            detail(id){
+            detail(id) {
                 this.$router.push({
-                    path:"/course/detail",
-                    query:{
-                        id:id
+                    path: "/course/detail",
+                    query: {
+                        id: id
                     }
                 })
             }

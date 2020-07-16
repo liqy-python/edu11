@@ -27,7 +27,8 @@ class CourseModelSerializer(ModelSerializer):
 
     class Meta:
         model = Course
-        fields = ["id", "name", "course_img", "students", "lessons", "pub_lessons", "price", "teacher", "lesson_list"]
+        fields = ["id", "name", "course_img", "students", "lessons", "pub_lessons", "price", "teacher", "lesson_list",
+                  "discount_name", "real_price"]
 
 
 class DetailModelSerializer(ModelSerializer):
@@ -36,7 +37,7 @@ class DetailModelSerializer(ModelSerializer):
     class Meta:
         model = Course
         fields = ["id", "name", "course_img", "students", "lessons", "pub_lessons", "price", "teacher","level_name",
-                  "course_video","brief_html"]
+                  "course_video","brief_html", "discount_name", "real_price", "active_time"]
 
 
 class CourseLessionModerSerializer(ModelSerializer):

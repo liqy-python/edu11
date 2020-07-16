@@ -131,7 +131,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
@@ -214,7 +214,7 @@ AUTH_USER_MODEL = 'users.UserInfo'
 # jwt配置
 JWT_AUTH = {
     # 有效时间
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=30000*60),
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=30000 * 60),
     # 自定义jwt返回值的格式方法
     'JWT_RESPONSE_PAYLOAD_HANDLER': 'users.utils.jwt_response_payload_handler',
 }
@@ -265,5 +265,17 @@ KEDITOR_CONFIGS = {
         'height': 300,  # 编辑器的高度
         'width': 300,
     },
+    # 'default': {
+    #     'toolbar': 'Custom',
+    #     'toolbar_Custom': [
+    #         ['Bold', 'Italic', 'Underline'],
+    #         ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter',
+    #          'JustifyRight', 'JustifyBlock', "image"],
+    #         ['Link', 'Unlink'],
+    #         ['RemoveFormat', 'Source']
+    #     ]
+    # }
 }
+
+# 富文本上传图片的路径  为空的话代表使用django的文件上传
 CKEDITOR_UPLOAD_PATH = ''
