@@ -4068,3 +4068,702 @@ INFO 2020-07-16 23:01:01,041 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
 INFO 2020-07-16 23:01:01,041 basehttp 124 "GET /course/chapter/?course=11 HTTP/1.1" 200 2
 INFO 2020-07-16 23:01:01,063 basehttp 124 "GET /course/detail/11 HTTP/1.1" 200 1099
 INFO 2020-07-16 23:01:05,085 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:02:40,789 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:02:40,789 basehttp 124 "GET /home/banner/ HTTP/1.1" 200 435
+INFO 2020-07-17 21:02:41,730 basehttp 124 "GET /media/banner/u20758204293405854705fm26gp0_murYKJC.jpg HTTP/1.1" 304 0
+INFO 2020-07-17 21:02:41,731 basehttp 124 "GET /media/banner/timg_5_VuVLm70.jpg HTTP/1.1" 304 0
+INFO 2020-07-17 21:02:41,731 basehttp 124 "GET /media/banner/timg_6_6j9voKD.jpg HTTP/1.1" 304 0
+INFO 2020-07-17 21:02:41,731 basehttp 124 "GET /media/banner/timg_4_NkbrYS7.jpg HTTP/1.1" 304 0
+INFO 2020-07-17 21:02:44,925 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:02:52,785 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-17 21:02:53,128 basehttp 124 "GET /course/list_filter/?page=1&size=2&ordering=-id HTTP/1.1" 200 1038
+INFO 2020-07-17 21:02:53,349 basehttp 124 "GET /media/course/2452c9d2-3539-447b-a98a-99378a750dee_HE02XxK.png HTTP/1.1" 304 0
+INFO 2020-07-17 21:02:53,687 basehttp 124 "GET /media/course/9000eeed-b0af-4df4-b6fb-c2becfcc5b18_OfHczCN.jpg HTTP/1.1" 304 0
+INFO 2020-07-17 21:03:00,889 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:03:00,913 basehttp 124 "GET /course/detail/12 HTTP/1.1" 200 700
+INFO 2020-07-17 21:03:00,914 basehttp 124 "GET /course/chapter/?course=12 HTTP/1.1" 200 2
+INFO 2020-07-17 21:03:01,840 basehttp 124 "GET /media/teacher/timg.jpg HTTP/1.1" 304 0
+INFO 2020-07-17 21:03:04,942 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:03:05,782 basehttp 124 "OPTIONS /cart/option/ HTTP/1.1" 200 0
+INFO 2020-07-17 21:03:11,960 basehttp 124 "POST /cart/option/ HTTP/1.1" 200 51
+INFO 2020-07-17 21:03:14,522 basehttp 124 "GET /media/video/05cacb4e02f9d9e.mp4 HTTP/1.1" 200 6348800
+ERROR 2020-07-17 21:03:14,630 basehttp 124 "GET /media/video/05cacb4e02f9d9e.mp4 HTTP/1.1" 500 59
+INFO 2020-07-17 21:03:18,503 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:03:18,625 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 21:03:22,556 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+WARNING 2020-07-17 21:03:28,649 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 401 43
+INFO 2020-07-17 21:03:40,611 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:03:40,661 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 21:03:44,642 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+WARNING 2020-07-17 21:03:59,235 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 401 43
+INFO 2020-07-17 21:10:15,087 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:10:15,893 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 21:10:19,196 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+WARNING 2020-07-17 21:10:41,095 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 400 50
+INFO 2020-07-17 21:18:12,369 basehttp 124 "GET /user/captcha/?username=18842038737 HTTP/1.1" 200 140
+INFO 2020-07-17 21:18:30,191 basehttp 124 "OPTIONS /user/captcha/ HTTP/1.1" 200 0
+INFO 2020-07-17 21:18:30,266 basehttp 124 "POST /user/captcha/ HTTP/1.1" 200 17
+INFO 2020-07-17 21:18:30,286 basehttp 124 "OPTIONS /user/login/ HTTP/1.1" 200 0
+INFO 2020-07-17 21:18:34,980 basehttp 124 "POST /user/login/ HTTP/1.1" 200 218
+INFO 2020-07-17 21:18:39,246 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:18:39,580 basehttp 124 "GET /home/banner/ HTTP/1.1" 200 435
+INFO 2020-07-17 21:18:42,324 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 21:18:43,316 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:18:47,368 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+WARNING 2020-07-17 21:18:49,489 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 401 43
+INFO 2020-07-17 21:18:51,427 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+WARNING 2020-07-17 21:23:26,943 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 401 43
+INFO 2020-07-17 21:37:10,243 basehttp 124 "OPTIONS /cart/option/ HTTP/1.1" 200 0
+INFO 2020-07-17 21:37:15,241 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:37:15,242 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:37:18,013 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 21:37:26,543 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 21:37:34,178 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:37:34,274 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 21:37:38,300 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:37:49,568 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 21:37:53,686 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 21:37:57,852 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 21:38:52,343 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:38:52,496 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 21:38:56,416 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:38:58,774 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 21:39:04,535 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:39:04,569 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 21:39:08,572 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:41:18,986 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 21:44:04,411 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:44:04,508 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 21:44:08,478 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:44:23,355 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 21:44:35,551 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:44:35,570 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 21:44:39,663 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:44:47,253 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 21:45:49,289 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 21:45:49,296 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:45:53,361 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:45:56,447 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 21:50:20,530 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 21:51:05,547 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 21:53:02,081 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+ERROR 2020-07-17 21:53:24,953 exception 74 Invalid HTTP_HOST header: '127.0.0.1:9001'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2020-07-17 21:53:29,166 basehttp 124 "GET / HTTP/1.1" 400 70063
+ERROR 2020-07-17 21:53:32,618 exception 74 Invalid HTTP_HOST header: '127.0.0.1:9001'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2020-07-17 21:53:32,783 basehttp 124 "GET /favicon.ico HTTP/1.1" 400 69976
+INFO 2020-07-17 21:54:06,714 basehttp 124 "OPTIONS /cart/option/ HTTP/1.1" 200 0
+INFO 2020-07-17 21:54:10,928 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:54:11,370 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:54:11,502 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 21:54:14,951 basehttp 124 "OPTIONS /cart/opp/ HTTP/1.1" 200 0
+WARNING 2020-07-17 21:54:15,024 base 93 Not Found: /cart/opp/
+WARNING 2020-07-17 21:54:15,025 basehttp 124 "GET /cart/opp/ HTTP/1.1" 404 2841
+WARNING 2020-07-17 21:54:54,335 base 93 Not Found: /cart/opp/
+WARNING 2020-07-17 21:54:54,336 basehttp 124 "GET /cart/opp/ HTTP/1.1" 404 2841
+INFO 2020-07-17 21:56:43,111 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:56:43,357 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+WARNING 2020-07-17 21:56:46,158 base 93 Not Found: /cart/opp/
+WARNING 2020-07-17 21:56:46,159 basehttp 124 "DELETE /cart/opp/ HTTP/1.1" 404 2844
+INFO 2020-07-17 21:56:47,137 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:59:42,550 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 21:59:42,905 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+WARNING 2020-07-17 21:59:46,515 base 93 Not Found: /cart/opp/
+WARNING 2020-07-17 21:59:46,515 basehttp 124 "DELETE /cart/opp/ HTTP/1.1" 404 2689
+INFO 2020-07-17 21:59:46,616 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+WARNING 2020-07-17 22:00:14,197 base 93 Not Found: /cart/opp/
+WARNING 2020-07-17 22:00:14,198 basehttp 124 "DELETE /cart/opp/ HTTP/1.1" 404 2689
+INFO 2020-07-17 22:00:25,243 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 22:00:25,346 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 1244
+INFO 2020-07-17 22:00:29,320 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 22:00:33,001 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 200 26
+INFO 2020-07-17 22:00:45,836 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 200 26
+INFO 2020-07-17 22:00:54,125 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 200 26
+INFO 2020-07-17 22:01:01,608 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 311
+INFO 2020-07-17 22:01:01,613 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-17 22:01:05,658 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:29:19,726 basehttp 124 "GET /home/banner/ HTTP/1.1" 200 435
+INFO 2020-07-18 11:29:19,726 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:29:24,449 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:29:48,685 basehttp 124 "GET /user/captcha/?username=18842038737 HTTP/1.1" 200 140
+INFO 2020-07-18 11:30:31,787 basehttp 124 "OPTIONS /user/captcha/ HTTP/1.1" 200 0
+INFO 2020-07-18 11:30:31,801 basehttp 124 "POST /user/captcha/ HTTP/1.1" 200 17
+INFO 2020-07-18 11:30:31,815 basehttp 124 "OPTIONS /user/login/ HTTP/1.1" 200 0
+INFO 2020-07-18 11:30:36,089 basehttp 124 "POST /user/login/ HTTP/1.1" 200 218
+INFO 2020-07-18 11:30:40,235 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:30:40,271 basehttp 124 "GET /home/banner/ HTTP/1.1" 200 435
+INFO 2020-07-18 11:30:44,286 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:30:48,621 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-18 11:30:48,970 basehttp 124 "GET /course/list_filter/?page=1&size=2&ordering=-id HTTP/1.1" 200 1038
+INFO 2020-07-18 11:30:49,102 basehttp 124 "GET /media/course/2452c9d2-3539-447b-a98a-99378a750dee_HE02XxK.png HTTP/1.1" 304 0
+INFO 2020-07-18 11:30:49,173 basehttp 124 "GET /media/course/9000eeed-b0af-4df4-b6fb-c2becfcc5b18_OfHczCN.jpg HTTP/1.1" 304 0
+INFO 2020-07-18 11:31:36,773 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:31:36,828 basehttp 124 "GET /course/detail/12 HTTP/1.1" 200 700
+INFO 2020-07-18 11:31:37,054 basehttp 124 "GET /course/chapter/?course=12 HTTP/1.1" 200 2
+INFO 2020-07-18 11:31:37,205 basehttp 124 "GET /media/teacher/timg.jpg HTTP/1.1" 304 0
+INFO 2020-07-18 11:31:40,799 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:31:42,389 basehttp 124 "OPTIONS /cart/option/ HTTP/1.1" 200 0
+INFO 2020-07-18 11:31:48,415 basehttp 124 "POST /cart/option/ HTTP/1.1" 200 51
+INFO 2020-07-18 11:31:52,659 basehttp 124 "GET /media/video/05cacb4e02f9d9e.mp4 HTTP/1.1" 200 7020544
+ERROR 2020-07-18 11:31:52,869 basehttp 124 "GET /media/video/05cacb4e02f9d9e.mp4 HTTP/1.1" 500 59
+INFO 2020-07-18 11:31:56,852 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-18 11:31:56,860 basehttp 124 "GET /course/list_filter/?page=1&size=2&ordering=-id HTTP/1.1" 200 1038
+INFO 2020-07-18 11:32:02,606 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:32:02,625 basehttp 124 "GET /course/chapter/?course=11 HTTP/1.1" 200 2
+INFO 2020-07-18 11:32:02,674 basehttp 124 "GET /course/detail/11 HTTP/1.1" 200 1099
+INFO 2020-07-18 11:32:02,833 basehttp 124 "GET /media/teacher/timg_2.jpg HTTP/1.1" 304 0
+INFO 2020-07-18 11:32:06,865 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:32:07,922 basehttp 124 "POST /cart/option/ HTTP/1.1" 200 51
+INFO 2020-07-18 11:32:11,347 basehttp 124 "GET /media/video/05cacb4e02f9d9e_u1QdkcE.mp4 HTTP/1.1" 200 4358144
+ERROR 2020-07-18 11:32:11,348 basehttp 124 "GET /media/video/05cacb4e02f9d9e_u1QdkcE.mp4 HTTP/1.1" 500 59
+INFO 2020-07-18 11:32:15,347 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:32:15,400 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 942
+INFO 2020-07-18 11:32:15,526 basehttp 124 "GET /media/course/9000eeed-b0af-4df4-b6fb-c2becfcc5b18_JaQiBDU.jpg HTTP/1.1" 304 0
+INFO 2020-07-18 11:32:19,389 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:32:46,081 basehttp 124 "PUT /cart/option/ HTTP/1.1" 200 57
+INFO 2020-07-18 11:32:53,740 basehttp 124 "PUT /cart/option/ HTTP/1.1" 200 56
+INFO 2020-07-18 11:33:03,817 basehttp 124 "PUT /cart/option/ HTTP/1.1" 200 56
+INFO 2020-07-18 11:33:12,367 basehttp 124 "PATCH /cart/option/ HTTP/1.1" 200 32
+INFO 2020-07-18 11:33:16,533 basehttp 124 "PATCH /cart/option/ HTTP/1.1" 200 32
+INFO 2020-07-18 11:33:18,540 basehttp 124 "PATCH /cart/option/ HTTP/1.1" 200 32
+INFO 2020-07-18 11:35:36,156 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:35:36,192 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 943
+INFO 2020-07-18 11:35:40,213 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:35:45,898 basehttp 124 "PATCH /cart/option/ HTTP/1.1" 200 32
+INFO 2020-07-18 11:36:01,520 basehttp 124 "PUT /cart/option/ HTTP/1.1" 200 56
+INFO 2020-07-18 11:36:07,512 basehttp 124 "PUT /cart/option/ HTTP/1.1" 200 58
+INFO 2020-07-18 11:36:39,569 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:36:39,611 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 943
+INFO 2020-07-18 11:36:43,613 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:36:50,413 basehttp 124 "PATCH /cart/option/ HTTP/1.1" 200 32
+INFO 2020-07-18 11:37:50,623 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:37:50,661 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 942
+INFO 2020-07-18 11:37:54,666 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:37:59,747 basehttp 124 "PATCH /cart/option/ HTTP/1.1" 200 32
+INFO 2020-07-18 11:38:07,562 basehttp 124 "PATCH /cart/option/ HTTP/1.1" 200 32
+INFO 2020-07-18 11:38:08,785 basehttp 124 "PATCH /cart/option/ HTTP/1.1" 200 32
+INFO 2020-07-18 11:38:27,565 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 200 26
+INFO 2020-07-18 11:38:42,022 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:38:42,040 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 631
+INFO 2020-07-18 11:38:46,080 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:38:52,339 basehttp 124 "PUT /cart/option/ HTTP/1.1" 200 58
+INFO 2020-07-18 11:39:32,560 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:39:32,576 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 632
+INFO 2020-07-18 11:39:36,606 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:40:01,775 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:40:01,786 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 632
+INFO 2020-07-18 11:40:05,819 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:41:50,885 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 632
+INFO 2020-07-18 11:41:50,890 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+ERROR 2020-07-18 11:41:50,894 basehttp 124 "GET /cart/option/ HTTP/1.1" 500 59
+ERROR 2020-07-18 11:41:50,895 basehttp 124 "GET /home/nav/ HTTP/1.1" 500 59
+INFO 2020-07-18 11:41:51,932 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+ERROR 2020-07-18 11:41:51,943 basehttp 124 "GET /home/nav/ HTTP/1.1" 500 59
+INFO 2020-07-18 11:41:51,966 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 632
+ERROR 2020-07-18 11:41:51,968 basehttp 124 "GET /cart/option/ HTTP/1.1" 500 59
+INFO 2020-07-18 11:41:55,506 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:41:55,512 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 632
+INFO 2020-07-18 11:41:59,551 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:43:58,002 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 11:43:58,491 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 632
+INFO 2020-07-18 11:44:02,179 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 12:46:44,497 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+ERROR 2020-07-18 12:46:45,026 basehttp 124 "GET /home/nav/ HTTP/1.1" 500 59
+INFO 2020-07-18 12:46:45,386 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 632
+ERROR 2020-07-18 12:46:45,389 basehttp 124 "GET /cart/option/ HTTP/1.1" 500 59
+INFO 2020-07-18 12:46:49,206 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 632
+INFO 2020-07-18 12:46:49,213 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 12:46:53,272 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 12:47:05,359 basehttp 124 "PATCH /cart/option/ HTTP/1.1" 200 32
+ERROR 2020-07-18 12:47:05,360 basehttp 124 "PATCH /cart/option/ HTTP/1.1" 500 59
+INFO 2020-07-18 12:47:08,882 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 633
+INFO 2020-07-18 12:47:08,925 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 12:47:12,985 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 12:47:25,354 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 12:47:25,375 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 633
+INFO 2020-07-18 12:47:29,394 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 19:57:15,682 basehttp 124 "GET /xadmin/ HTTP/1.1" 200 22512
+ERROR 2020-07-18 19:57:15,889 basehttp 124 "GET /xadmin/ HTTP/1.1" 500 59
+INFO 2020-07-18 19:57:16,608 basehttp 124 "GET /xadmin/ HTTP/1.1" 200 22512
+INFO 2020-07-18 19:57:17,507 basehttp 124 "GET /static/xadmin/css/xadmin.plugins.css HTTP/1.1" 304 0
+INFO 2020-07-18 19:57:17,507 basehttp 124 "GET /static/xadmin/css/xadmin.page.dashboard.css HTTP/1.1" 304 0
+INFO 2020-07-18 19:57:17,537 basehttp 124 "GET /static/xadmin/css/xadmin.main.css HTTP/1.1" 304 0
+INFO 2020-07-18 19:57:17,541 basehttp 124 "GET /static/xadmin/css/xadmin.responsive.css HTTP/1.1" 304 0
+INFO 2020-07-18 19:57:17,555 basehttp 124 "GET /static/xadmin/css/themes/bootstrap-xadmin.css HTTP/1.1" 304 0
+INFO 2020-07-18 19:57:17,617 basehttp 124 "GET /static/xadmin/vendor/font-awesome/css/font-awesome.css HTTP/1.1" 304 0
+INFO 2020-07-18 19:57:17,621 basehttp 124 "GET /static/xadmin/vendor/bootstrap/css/bootstrap.css HTTP/1.1" 304 0
+INFO 2020-07-18 19:57:17,629 basehttp 124 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.widget.js HTTP/1.1" 304 0
+INFO 2020-07-18 19:57:17,630 basehttp 124 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js HTTP/1.1" 304 0
+INFO 2020-07-18 19:57:17,635 basehttp 124 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js HTTP/1.1" 304 0
+INFO 2020-07-18 19:57:17,644 basehttp 124 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.core.js HTTP/1.1" 304 0
+INFO 2020-07-18 19:57:17,973 basehttp 124 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.effect.js HTTP/1.1" 304 0
+INFO 2020-07-18 19:57:18,081 basehttp 124 "GET /static/xadmin/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2020-07-18 19:57:18,137 basehttp 124 "GET /static/xadmin/js/xadmin.page.dashboard.js HTTP/1.1" 304 0
+INFO 2020-07-18 19:57:18,137 basehttp 124 "GET /static/xadmin/js/xadmin.plugin.themes.js HTTP/1.1" 304 0
+INFO 2020-07-18 19:57:18,138 basehttp 124 "GET /static/xadmin/js/xadmin.plugin.portal.js HTTP/1.1" 304 0
+INFO 2020-07-18 19:57:18,138 basehttp 124 "GET /static/xadmin/js/xadmin.responsive.js HTTP/1.1" 304 0
+INFO 2020-07-18 19:57:18,294 basehttp 124 "GET /static/xadmin/js/xadmin.main.js HTTP/1.1" 304 0
+INFO 2020-07-18 19:57:18,323 basehttp 124 "GET /static/xadmin/vendor/bootstrap/js/bootstrap.js HTTP/1.1" 304 0
+INFO 2020-07-18 19:57:21,715 basehttp 124 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2020-07-18 19:57:22,842 basehttp 124 "GET /static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.0.3 HTTP/1.1" 304 0
+WARNING 2020-07-18 19:57:23,003 base 93 Not Found: /favicon.ico
+WARNING 2020-07-18 19:57:23,003 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2638
+INFO 2020-07-18 19:58:29,315 basehttp 124 "GET /xadmin/ HTTP/1.1" 200 22512
+INFO 2020-07-18 19:58:33,416 basehttp 124 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2020-07-18 22:40:35,234 basehttp 124 "GET /home/banner/ HTTP/1.1" 200 435
+INFO 2020-07-18 22:40:35,578 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 22:40:37,191 basehttp 124 "GET /media/banner/timg_4_NkbrYS7.jpg HTTP/1.1" 304 0
+INFO 2020-07-18 22:40:37,191 basehttp 124 "GET /media/banner/u20758204293405854705fm26gp0_murYKJC.jpg HTTP/1.1" 304 0
+INFO 2020-07-18 22:40:37,192 basehttp 124 "GET /media/banner/timg_6_6j9voKD.jpg HTTP/1.1" 304 0
+INFO 2020-07-18 22:40:37,193 basehttp 124 "GET /media/banner/timg_5_VuVLm70.jpg HTTP/1.1" 304 0
+INFO 2020-07-18 22:40:39,865 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 22:41:06,390 basehttp 124 "GET /user/captcha/?username=18842038737 HTTP/1.1" 200 140
+INFO 2020-07-18 22:41:29,045 basehttp 124 "OPTIONS /user/captcha/ HTTP/1.1" 200 0
+INFO 2020-07-18 22:41:29,050 basehttp 124 "POST /user/captcha/ HTTP/1.1" 200 17
+INFO 2020-07-18 22:41:29,056 basehttp 124 "OPTIONS /user/login/ HTTP/1.1" 200 0
+INFO 2020-07-18 22:41:33,261 basehttp 124 "POST /user/login/ HTTP/1.1" 200 218
+INFO 2020-07-18 22:41:37,374 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 22:41:37,383 basehttp 124 "GET /home/banner/ HTTP/1.1" 200 435
+INFO 2020-07-18 22:41:41,478 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 22:41:41,604 basehttp 124 "OPTIONS /cart/option/ HTTP/1.1" 200 0
+INFO 2020-07-18 22:41:45,642 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 22:41:48,824 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 633
+INFO 2020-07-18 22:41:48,919 basehttp 124 "GET /media/course/9000eeed-b0af-4df4-b6fb-c2becfcc5b18_OfHczCN.jpg HTTP/1.1" 304 0
+INFO 2020-07-18 22:41:48,940 basehttp 124 "GET /media/course/2452c9d2-3539-447b-a98a-99378a750dee_HE02XxK.png HTTP/1.1" 304 0
+INFO 2020-07-18 22:41:49,996 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 22:42:11,582 basehttp 124 "PUT /cart/option/ HTTP/1.1" 200 56
+INFO 2020-07-18 22:44:14,819 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 22:44:18,860 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 22:45:22,114 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 22:45:26,232 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 22:46:09,544 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 22:46:13,621 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 23:00:58,043 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 23:01:02,259 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 23:05:10,286 basehttp 124 "OPTIONS /cart/order/ HTTP/1.1" 200 0
+INFO 2020-07-18 23:05:14,447 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 23:05:18,469 basehttp 124 "GET /cart/order/ HTTP/1.1" 200 303
+INFO 2020-07-18 23:05:18,562 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 23:05:23,038 basehttp 124 "OPTIONS /order/option/ HTTP/1.1" 200 0
+WARNING 2020-07-18 23:05:27,756 basehttp 124 "GET /order/option/ HTTP/1.1" 405 45
+INFO 2020-07-18 23:07:28,324 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 23:07:28,377 basehttp 124 "GET /cart/order/ HTTP/1.1" 200 303
+INFO 2020-07-18 23:07:32,457 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+WARNING 2020-07-18 23:07:38,493 basehttp 124 "GET /order/option/ HTTP/1.1" 405 45
+INFO 2020-07-18 23:08:10,181 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 23:08:10,207 basehttp 124 "GET /cart/order/ HTTP/1.1" 200 303
+ERROR 2020-07-18 23:08:11,186 basehttp 124 "GET /cart/order/ HTTP/1.1" 500 59
+ERROR 2020-07-18 23:08:11,204 basehttp 124 "GET /home/nav/ HTTP/1.1" 500 59
+INFO 2020-07-18 23:08:11,930 basehttp 124 "GET /cart/order/ HTTP/1.1" 200 303
+INFO 2020-07-18 23:08:12,131 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 23:08:16,191 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+WARNING 2020-07-18 23:08:18,227 basehttp 124 "GET /order/option/ HTTP/1.1" 405 45
+INFO 2020-07-18 23:08:38,511 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 23:08:38,623 basehttp 124 "GET /cart/order/ HTTP/1.1" 200 303
+INFO 2020-07-18 23:08:42,566 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+WARNING 2020-07-18 23:09:59,762 basehttp 124 "GET /order/option/ HTTP/1.1" 405 45
+INFO 2020-07-18 23:23:09,710 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 23:23:10,683 basehttp 124 "GET /cart/order/ HTTP/1.1" 200 303
+INFO 2020-07-18 23:23:14,121 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+WARNING 2020-07-18 23:23:17,109 basehttp 124 "GET /order/option/ HTTP/1.1" 405 45
+INFO 2020-07-18 23:24:05,979 basehttp 124 "GET /cart/order/ HTTP/1.1" 200 303
+INFO 2020-07-18 23:24:06,735 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 23:24:10,867 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+WARNING 2020-07-18 23:24:11,105 basehttp 124 "GET /order/option/ HTTP/1.1" 405 45
+WARNING 2020-07-18 23:25:36,153 basehttp 124 "GET /order/option/ HTTP/1.1" 405 45
+INFO 2020-07-18 23:26:42,293 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 23:26:42,506 basehttp 124 "GET /cart/order/ HTTP/1.1" 200 303
+INFO 2020-07-18 23:26:46,487 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 23:29:28,661 basehttp 124 "GET /cart/order/ HTTP/1.1" 200 303
+INFO 2020-07-18 23:29:28,671 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-18 23:29:32,708 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+ERROR 2020-07-18 23:29:32,841 exception 118 Internal Server Error: /order/option/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 419, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2020-07-18 23:29:34,580 basehttp 124 "POST /order/option/ HTTP/1.1" 500 86838
+INFO 2020-07-18 23:37:00,723 basehttp 124 "POST /order/option/ HTTP/1.1" 200 20
+INFO 2020-07-18 23:44:16,706 basehttp 124 "GET /xadmin/ HTTP/1.1" 200 22512
+INFO 2020-07-18 23:44:21,375 basehttp 124 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2020-07-18 23:47:20,626 basehttp 124 "GET /xadmin/ HTTP/1.1" 200 22512
+WARNING 2020-07-18 23:47:23,048 base 93 Not Found: /favicon.ico
+WARNING 2020-07-18 23:47:23,051 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2744
+INFO 2020-07-18 23:47:35,230 basehttp 124 "GET /xadmin/order/order/ HTTP/1.1" 200 33307
+INFO 2020-07-18 23:47:35,586 basehttp 124 "GET /static/xadmin/css/xadmin.form.css HTTP/1.1" 304 0
+INFO 2020-07-18 23:47:35,587 basehttp 124 "GET /static/xadmin/js/xadmin.plugin.bookmark.js HTTP/1.1" 304 0
+INFO 2020-07-18 23:47:35,603 basehttp 124 "GET /static/xadmin/js/xadmin.plugin.filters.js HTTP/1.1" 304 0
+INFO 2020-07-18 23:47:35,604 basehttp 124 "GET /static/xadmin/js/xadmin.plugin.details.js HTTP/1.1" 304 0
+INFO 2020-07-18 23:47:35,634 basehttp 124 "GET /static/xadmin/js/xadmin.page.form.js HTTP/1.1" 304 0
+INFO 2020-07-18 23:47:35,635 basehttp 124 "GET /static/xadmin/js/xadmin.page.list.js HTTP/1.1" 304 0
+INFO 2020-07-18 23:47:39,560 basehttp 124 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2020-07-18 23:47:47,534 basehttp 124 "GET /xadmin/order/orderdetail/ HTTP/1.1" 200 32660
+INFO 2020-07-18 23:47:51,627 basehttp 124 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2020-07-18 23:47:58,693 basehttp 124 "GET /xadmin/order/order/ HTTP/1.1" 200 33307
+INFO 2020-07-18 23:48:02,743 basehttp 124 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2020-07-19 15:40:50,366 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 15:40:50,367 basehttp 124 "GET /home/banner/ HTTP/1.1" 200 435
+INFO 2020-07-19 15:40:55,344 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 15:45:19,775 basehttp 124 "GET /user/captcha/?username=18842038737 HTTP/1.1" 200 140
+INFO 2020-07-19 15:45:57,162 basehttp 124 "OPTIONS /user/captcha/ HTTP/1.1" 200 0
+INFO 2020-07-19 15:45:57,169 basehttp 124 "POST /user/captcha/ HTTP/1.1" 200 17
+INFO 2020-07-19 15:45:57,262 basehttp 124 "OPTIONS /user/login/ HTTP/1.1" 200 0
+INFO 2020-07-19 15:46:01,514 basehttp 124 "POST /user/login/ HTTP/1.1" 200 218
+INFO 2020-07-19 15:46:05,901 basehttp 124 "GET /home/banner/ HTTP/1.1" 200 435
+INFO 2020-07-19 15:46:05,902 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 15:46:09,972 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 15:46:13,494 basehttp 124 "OPTIONS /cart/option/ HTTP/1.1" 200 0
+INFO 2020-07-19 15:46:17,532 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 15:46:18,807 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 632
+INFO 2020-07-19 15:46:19,151 basehttp 124 "GET /media/course/9000eeed-b0af-4df4-b6fb-c2becfcc5b18_OfHczCN.jpg HTTP/1.1" 304 0
+INFO 2020-07-19 15:46:19,154 basehttp 124 "GET /media/course/2452c9d2-3539-447b-a98a-99378a750dee_HE02XxK.png HTTP/1.1" 304 0
+INFO 2020-07-19 15:46:21,597 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 15:46:23,230 basehttp 124 "OPTIONS /cart/order/ HTTP/1.1" 200 0
+INFO 2020-07-19 15:46:27,290 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 15:46:27,481 basehttp 124 "GET /cart/order/ HTTP/1.1" 200 303
+INFO 2020-07-19 15:46:31,341 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 15:46:32,077 basehttp 124 "OPTIONS /order/option/ HTTP/1.1" 200 0
+INFO 2020-07-19 15:46:34,118 basehttp 124 "POST /order/option/ HTTP/1.1" 200 32
+INFO 2020-07-19 15:46:38,222 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 15:46:38,261 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 632
+INFO 2020-07-19 15:46:42,297 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 15:47:26,584 basehttp 124 "GET /xadmin/ HTTP/1.1" 200 22512
+INFO 2020-07-19 15:47:31,547 basehttp 124 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2020-07-19 15:47:34,495 basehttp 124 "GET /xadmin/ HTTP/1.1" 200 22512
+WARNING 2020-07-19 15:47:35,935 base 93 Not Found: /favicon.ico
+WARNING 2020-07-19 15:47:35,937 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2744
+INFO 2020-07-19 15:47:47,414 basehttp 124 "GET /xadmin/order/order/ HTTP/1.1" 200 33307
+INFO 2020-07-19 15:47:51,573 basehttp 124 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2020-07-19 15:53:09,393 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 15:53:10,229 basehttp 124 "GET /cart/order/ HTTP/1.1" 200 303
+ERROR 2020-07-19 15:53:12,587 exceptions 18 <order.views.OrderAPIView object at 0x0000018A7DBDF048> POST tuple indices must be integers or slices, not NoneType
+ERROR 2020-07-19 15:53:12,588 basehttp 124 "POST /order/option/ HTTP/1.1" 500 56
+INFO 2020-07-19 15:53:13,506 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+ERROR 2020-07-19 15:54:13,631 exceptions 18 <order.views.OrderAPIView object at 0x000002024A4A8908> POST tuple indices must be integers or slices, not NoneType
+ERROR 2020-07-19 15:54:13,634 basehttp 124 "POST /order/option/ HTTP/1.1" 500 56
+ERROR 2020-07-19 15:57:36,508 exception 118 Internal Server Error: /order/option/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 419, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2020-07-19 15:57:37,721 basehttp 124 "POST /order/option/ HTTP/1.1" 500 84767
+ERROR 2020-07-19 16:00:31,173 exception 118 Internal Server Error: /order/option/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 419, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2020-07-19 16:00:31,535 basehttp 124 "POST /order/option/ HTTP/1.1" 500 84767
+INFO 2020-07-19 16:22:39,524 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 16:22:43,713 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 16:24:10,776 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 16:24:14,017 basehttp 124 "GET /cart/order/ HTTP/1.1" 200 303
+INFO 2020-07-19 16:24:14,868 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 16:25:16,630 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 16:25:16,746 basehttp 124 "GET /cart/order/ HTTP/1.1" 200 303
+INFO 2020-07-19 16:25:20,881 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 16:27:23,589 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 16:27:23,623 basehttp 124 "GET /cart/order/ HTTP/1.1" 200 303
+INFO 2020-07-19 16:27:27,649 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 16:38:32,336 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 16:38:32,352 basehttp 124 "GET /cart/order/ HTTP/1.1" 200 303
+INFO 2020-07-19 16:38:36,396 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+ERROR 2020-07-19 16:38:38,805 exception 118 Internal Server Error: /order/option/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 419, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2020-07-19 16:38:41,132 basehttp 124 "POST /order/option/ HTTP/1.1" 500 85077
+INFO 2020-07-19 16:39:11,180 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 16:39:11,209 basehttp 124 "GET /cart/order/ HTTP/1.1" 200 303
+INFO 2020-07-19 16:39:15,216 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+ERROR 2020-07-19 16:43:24,913 exception 118 Internal Server Error: /order/option/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 419, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2020-07-19 16:43:25,088 basehttp 124 "POST /order/option/ HTTP/1.1" 500 85077
+INFO 2020-07-19 16:46:41,794 basehttp 124 "POST /order/option/ HTTP/1.1" 200 32
+INFO 2020-07-19 16:46:46,323 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 16:46:46,611 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 632
+INFO 2020-07-19 16:46:50,357 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 16:47:03,564 basehttp 124 "GET /xadmin/order/order/ HTTP/1.1" 200 33307
+INFO 2020-07-19 16:47:44,279 basehttp 124 "GET /xadmin/order/order/ HTTP/1.1" 200 33307
+INFO 2020-07-19 16:47:48,502 basehttp 124 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2020-07-19 16:55:01,287 basehttp 124 "PATCH /cart/option/ HTTP/1.1" 200 32
+INFO 2020-07-19 16:55:01,387 basehttp 124 "GET /cart/order/ HTTP/1.1" 200 539
+INFO 2020-07-19 16:55:01,603 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 16:55:05,626 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 16:55:09,022 basehttp 124 "POST /order/option/ HTTP/1.1" 201 52
+INFO 2020-07-19 16:56:18,872 basehttp 124 "POST /order/option/ HTTP/1.1" 201 52
+INFO 2020-07-19 17:01:41,668 basehttp 124 "POST /order/option/ HTTP/1.1" 201 52
+INFO 2020-07-19 17:02:47,189 basehttp 124 "POST /order/option/ HTTP/1.1" 201 52
+INFO 2020-07-19 17:02:50,489 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:02:50,530 basehttp 124 "GET /cart/order/ HTTP/1.1" 200 539
+INFO 2020-07-19 17:02:54,540 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:03:02,211 basehttp 124 "POST /order/option/ HTTP/1.1" 201 52
+INFO 2020-07-19 17:03:06,341 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:03:06,343 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 631
+INFO 2020-07-19 17:03:10,413 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:03:29,485 basehttp 124 "GET /xadmin/order/order/ HTTP/1.1" 200 40949
+INFO 2020-07-19 17:03:30,128 basehttp 124 "GET /static/xadmin/js/xadmin.plugin.actions.js HTTP/1.1" 304 0
+INFO 2020-07-19 17:03:34,136 basehttp 124 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2020-07-19 17:03:55,910 basehttp 124 "POST /xadmin/order/order/ HTTP/1.1" 200 24695
+INFO 2020-07-19 17:03:59,980 basehttp 124 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2020-07-19 17:04:08,220 basehttp 124 "POST /xadmin/order/order/ HTTP/1.1" 302 0
+INFO 2020-07-19 17:04:12,415 basehttp 124 "GET /xadmin/order/order/ HTTP/1.1" 200 36058
+INFO 2020-07-19 17:04:16,497 basehttp 124 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2020-07-19 17:04:42,436 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 200 26
+INFO 2020-07-19 17:06:43,163 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:06:43,357 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 313
+INFO 2020-07-19 17:06:47,303 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:06:52,499 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 200 26
+INFO 2020-07-19 17:08:15,759 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 2
+INFO 2020-07-19 17:08:15,798 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:08:19,846 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:13:56,479 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:13:56,480 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 2
+INFO 2020-07-19 17:14:00,515 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:14:07,245 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-19 17:14:07,690 basehttp 124 "GET /course/list_filter/?page=1&size=2&ordering=-id HTTP/1.1" 200 1038
+INFO 2020-07-19 17:14:19,581 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:14:19,609 basehttp 124 "GET /course/detail/12 HTTP/1.1" 200 700
+INFO 2020-07-19 17:14:19,665 basehttp 124 "GET /course/chapter/?course=12 HTTP/1.1" 200 2
+INFO 2020-07-19 17:14:19,868 basehttp 124 "GET /media/teacher/timg.jpg HTTP/1.1" 304 0
+INFO 2020-07-19 17:14:23,747 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:14:25,599 basehttp 124 "POST /cart/option/ HTTP/1.1" 200 51
+INFO 2020-07-19 17:14:30,407 basehttp 124 "GET /media/video/05cacb4e02f9d9e.mp4 HTTP/1.1" 200 6348800
+ERROR 2020-07-19 17:14:30,780 basehttp 124 "GET /media/video/05cacb4e02f9d9e.mp4 HTTP/1.1" 500 59
+INFO 2020-07-19 17:14:34,368 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 320
+INFO 2020-07-19 17:14:34,368 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:14:38,446 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:14:42,267 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 200 26
+INFO 2020-07-19 17:15:12,359 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-19 17:15:12,438 basehttp 124 "GET /course/list_filter/?page=1&size=2&ordering=-id HTTP/1.1" 200 1038
+INFO 2020-07-19 17:15:21,289 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:15:21,440 basehttp 124 "GET /course/chapter/?course=11 HTTP/1.1" 200 2
+INFO 2020-07-19 17:15:21,452 basehttp 124 "GET /course/detail/11 HTTP/1.1" 200 1099
+INFO 2020-07-19 17:15:21,568 basehttp 124 "GET /media/teacher/timg_2.jpg HTTP/1.1" 304 0
+INFO 2020-07-19 17:15:25,317 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:15:27,775 basehttp 124 "POST /cart/option/ HTTP/1.1" 200 51
+INFO 2020-07-19 17:15:30,704 basehttp 124 "GET /media/video/05cacb4e02f9d9e_u1QdkcE.mp4 HTTP/1.1" 200 5365760
+ERROR 2020-07-19 17:15:30,706 basehttp 124 "GET /media/video/05cacb4e02f9d9e_u1QdkcE.mp4 HTTP/1.1" 500 59
+INFO 2020-07-19 17:15:34,696 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:15:34,698 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 313
+INFO 2020-07-19 17:15:38,737 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:15:54,944 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 200 26
+INFO 2020-07-19 17:16:49,260 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-19 17:16:49,341 basehttp 124 "GET /course/list_filter/?page=1&size=2&ordering=-id HTTP/1.1" 200 1038
+INFO 2020-07-19 17:16:56,395 basehttp 124 "GET /course/chapter/?course=12 HTTP/1.1" 200 2
+INFO 2020-07-19 17:16:56,412 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:16:56,460 basehttp 124 "GET /course/detail/12 HTTP/1.1" 200 700
+INFO 2020-07-19 17:16:59,109 basehttp 124 "POST /cart/option/ HTTP/1.1" 200 51
+INFO 2020-07-19 17:17:00,477 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:17:01,192 basehttp 124 "GET /media/video/05cacb4e02f9d9e.mp4 HTTP/1.1" 200 4063232
+ERROR 2020-07-19 17:17:01,192 basehttp 124 "GET /media/video/05cacb4e02f9d9e.mp4 HTTP/1.1" 500 59
+INFO 2020-07-19 17:17:05,262 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:17:05,263 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 320
+INFO 2020-07-19 17:17:09,292 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:17:12,335 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 200 26
+INFO 2020-07-19 17:19:17,988 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 2
+INFO 2020-07-19 17:19:18,001 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:19:22,034 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:26:00,011 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-19 17:26:00,237 basehttp 124 "GET /course/list_filter/?page=1&size=2&ordering=-id HTTP/1.1" 200 1038
+INFO 2020-07-19 17:26:11,831 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:26:12,112 basehttp 124 "GET /course/chapter/?course=12 HTTP/1.1" 200 2
+INFO 2020-07-19 17:26:12,465 basehttp 124 "GET /course/detail/12 HTTP/1.1" 200 700
+INFO 2020-07-19 17:26:16,516 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:26:31,023 basehttp 124 "POST /cart/option/ HTTP/1.1" 200 51
+INFO 2020-07-19 17:26:34,241 basehttp 124 "GET /media/video/05cacb4e02f9d9e.mp4 HTTP/1.1" 200 6365184
+ERROR 2020-07-19 17:26:35,028 basehttp 124 "GET /media/video/05cacb4e02f9d9e.mp4 HTTP/1.1" 500 59
+INFO 2020-07-19 17:26:38,912 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:26:38,998 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 320
+INFO 2020-07-19 17:26:43,107 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:26:46,581 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 200 26
+INFO 2020-07-19 17:31:01,662 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 2
+INFO 2020-07-19 17:31:01,742 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:31:05,772 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:31:21,809 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-19 17:31:22,009 basehttp 124 "GET /course/list_filter/?page=1&size=2&ordering=-id HTTP/1.1" 200 1038
+INFO 2020-07-19 17:32:03,964 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:32:03,986 basehttp 124 "GET /course/chapter/?course=12 HTTP/1.1" 200 2
+INFO 2020-07-19 17:32:04,056 basehttp 124 "GET /course/detail/12 HTTP/1.1" 200 700
+INFO 2020-07-19 17:32:06,276 basehttp 124 "POST /cart/option/ HTTP/1.1" 200 51
+INFO 2020-07-19 17:32:07,997 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:32:19,664 basehttp 124 "GET /media/video/05cacb4e02f9d9e.mp4 HTTP/1.1" 200 3768320
+ERROR 2020-07-19 17:32:19,796 basehttp 124 "GET /media/video/05cacb4e02f9d9e.mp4 HTTP/1.1" 500 59
+INFO 2020-07-19 17:32:39,356 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:32:39,559 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 320
+INFO 2020-07-19 17:32:43,377 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:32:48,361 basehttp 124 "DELETE /cart/option/ HTTP/1.1" 200 26
+INFO 2020-07-19 17:37:09,198 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 2
+INFO 2020-07-19 17:37:09,296 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:37:13,316 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 17:47:43,956 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-19 17:47:44,032 basehttp 124 "GET /course/list_filter/?page=1&size=2&ordering=-id HTTP/1.1" 200 1038
+INFO 2020-07-19 19:13:54,533 basehttp 124 "GET /course/chapter/?course=12 HTTP/1.1" 200 2
+INFO 2020-07-19 19:13:54,537 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 19:13:54,706 basehttp 124 "GET /course/detail/12 HTTP/1.1" 200 700
+INFO 2020-07-19 19:13:58,565 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 19:13:59,395 basehttp 124 "OPTIONS /cart/order/ HTTP/1.1" 200 0
+INFO 2020-07-19 19:13:59,577 basehttp 124 "GET /media/video/05cacb4e02f9d9e.mp4 HTTP/1.1" 200 4194304
+ERROR 2020-07-19 19:13:59,784 basehttp 124 "GET /media/video/05cacb4e02f9d9e.mp4 HTTP/1.1" 500 59
+INFO 2020-07-19 19:14:03,657 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 19:14:04,565 basehttp 124 "GET /cart/order/ HTTP/1.1" 200 59
+INFO 2020-07-19 19:14:07,687 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 19:17:55,302 basehttp 124 "OPTIONS /cart/option/ HTTP/1.1" 200 0
+INFO 2020-07-19 19:17:59,355 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 2
+INFO 2020-07-19 19:17:59,364 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 19:18:03,400 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 19:18:10,913 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-19 19:18:11,100 basehttp 124 "GET /course/list_filter/?page=1&size=2&ordering=-id HTTP/1.1" 200 1038
+INFO 2020-07-19 19:18:17,582 basehttp 124 "GET /course/chapter/?course=12 HTTP/1.1" 200 2
+INFO 2020-07-19 19:18:17,617 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 19:18:17,686 basehttp 124 "GET /course/detail/12 HTTP/1.1" 200 700
+INFO 2020-07-19 19:18:21,646 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 19:18:22,012 basehttp 124 "POST /cart/option/ HTTP/1.1" 200 51
+INFO 2020-07-19 19:18:23,818 basehttp 124 "GET /media/video/05cacb4e02f9d9e.mp4 HTTP/1.1" 200 6348800
+ERROR 2020-07-19 19:18:23,821 basehttp 124 "GET /media/video/05cacb4e02f9d9e.mp4 HTTP/1.1" 500 59
+INFO 2020-07-19 19:18:27,803 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 19:18:27,839 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 320
+INFO 2020-07-19 19:18:32,004 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 19:18:34,605 basehttp 124 "GET /cart/order/ HTTP/1.1" 200 306
+INFO 2020-07-19 19:18:36,032 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 19:18:40,060 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 19:18:45,603 basehttp 124 "OPTIONS /order/option/ HTTP/1.1" 200 0
+INFO 2020-07-19 19:18:50,047 basehttp 124 "POST /order/option/ HTTP/1.1" 201 52
+INFO 2020-07-19 19:18:54,139 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 2
+INFO 2020-07-19 19:18:54,154 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 19:18:58,189 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 19:20:16,939 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 19:20:16,955 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 2
+INFO 2020-07-19 19:20:20,983 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 19:26:14,812 basehttp 124 "GET /course/category/ HTTP/1.1" 200 220
+INFO 2020-07-19 19:26:14,883 basehttp 124 "GET /course/list_filter/?page=1&size=2&ordering=-id HTTP/1.1" 200 1038
+INFO 2020-07-19 19:26:21,685 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 19:26:21,691 basehttp 124 "GET /course/chapter/?course=12 HTTP/1.1" 200 2
+INFO 2020-07-19 19:26:21,715 basehttp 124 "GET /course/detail/12 HTTP/1.1" 200 700
+INFO 2020-07-19 19:26:24,877 basehttp 124 "GET /media/video/05cacb4e02f9d9e.mp4 HTTP/1.1" 200 4063232
+ERROR 2020-07-19 19:26:24,878 basehttp 124 "GET /media/video/05cacb4e02f9d9e.mp4 HTTP/1.1" 500 59
+INFO 2020-07-19 19:26:25,726 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 19:26:28,831 basehttp 124 "POST /cart/option/ HTTP/1.1" 200 51
+INFO 2020-07-19 19:27:23,955 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 19:27:24,050 basehttp 124 "GET /cart/order/ HTTP/1.1" 200 306
+INFO 2020-07-19 19:27:28,005 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 19:28:38,910 basehttp 124 "POST /order/option/ HTTP/1.1" 201 52
+INFO 2020-07-19 19:28:43,041 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 19:28:43,046 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 2
+INFO 2020-07-19 19:28:47,070 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 19:29:16,047 basehttp 124 "GET /xadmin/order/order/ HTTP/1.1" 200 37877
+INFO 2020-07-19 19:29:21,100 basehttp 124 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2020-07-19 19:29:47,901 basehttp 124 "GET /xadmin/order/order/8/update/ HTTP/1.1" 200 31886
+INFO 2020-07-19 19:29:48,490 basehttp 124 "GET /static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.css HTTP/1.1" 304 0
+INFO 2020-07-19 19:29:48,491 basehttp 124 "GET /static/xadmin/vendor/selectize/selectize.css HTTP/1.1" 304 0
+INFO 2020-07-19 19:29:48,496 basehttp 124 "GET /static/xadmin/vendor/selectize/selectize.bootstrap3.css HTTP/1.1" 304 0
+INFO 2020-07-19 19:29:48,497 basehttp 124 "GET /static/xadmin/vendor/bootstrap-datepicker/css/datepicker.css HTTP/1.1" 304 0
+INFO 2020-07-19 19:29:48,507 basehttp 124 "GET /static/xadmin/vendor/select2/select2.css HTTP/1.1" 304 0
+INFO 2020-07-19 19:29:48,547 basehttp 124 "GET /static/xadmin/vendor/select2/select2.js HTTP/1.1" 304 0
+INFO 2020-07-19 19:29:48,549 basehttp 124 "GET /static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.js HTTP/1.1" 304 0
+INFO 2020-07-19 19:29:48,565 basehttp 124 "GET /static/xadmin/vendor/select2/select2_locale_zh-hans.js HTTP/1.1" 304 0
+INFO 2020-07-19 19:29:48,565 basehttp 124 "GET /static/xadmin/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js HTTP/1.1" 304 0
+INFO 2020-07-19 19:29:48,581 basehttp 124 "GET /static/xadmin/js/xadmin.widget.select.js HTTP/1.1" 304 0
+INFO 2020-07-19 19:29:48,630 basehttp 124 "GET /static/xadmin/js/xadmin.widget.datetime.js HTTP/1.1" 304 0
+INFO 2020-07-19 19:29:48,631 basehttp 124 "GET /static/xadmin/js/xadmin.plugin.quick-form.js HTTP/1.1" 304 0
+INFO 2020-07-19 19:29:48,631 basehttp 124 "GET /static/xadmin/vendor/selectize/selectize.js HTTP/1.1" 304 0
+INFO 2020-07-19 19:29:52,221 basehttp 124 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2020-07-19 19:30:14,266 basehttp 124 "GET /xadmin/order/order/ HTTP/1.1" 200 37877
+INFO 2020-07-19 19:30:18,547 basehttp 124 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2020-07-19 19:30:31,110 basehttp 124 "GET /xadmin/order/order/7/update/ HTTP/1.1" 200 31886
+INFO 2020-07-19 19:30:35,245 basehttp 124 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2020-07-19 19:30:48,845 basehttp 124 "GET /xadmin/order/order/ HTTP/1.1" 200 37877
+INFO 2020-07-19 19:30:52,920 basehttp 124 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2020-07-19 19:31:00,193 basehttp 124 "GET /xadmin/order/order/ HTTP/1.1" 200 37877
+ERROR 2020-07-19 19:31:00,194 basehttp 124 "GET /xadmin/order/order/ HTTP/1.1" 500 59
+INFO 2020-07-19 19:31:02,529 basehttp 124 "GET /xadmin/order/orderdetail/ HTTP/1.1" 200 35623
+INFO 2020-07-19 19:31:06,604 basehttp 124 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2020-07-19 19:31:13,544 basehttp 124 "GET /xadmin/order/orderdetail/14/update/ HTTP/1.1" 200 29580
+INFO 2020-07-19 19:31:17,604 basehttp 124 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2020-07-19 19:31:29,439 basehttp 124 "GET /xadmin/order/order/ HTTP/1.1" 200 37877
+INFO 2020-07-19 19:31:33,508 basehttp 124 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2020-07-19 19:48:59,701 basehttp 124 "GET /xadmin/order/order/6/update/ HTTP/1.1" 200 31886
+INFO 2020-07-19 19:48:59,856 basehttp 124 "GET /static/xadmin/css/xadmin.plugins.css HTTP/1.1" 304 0
+INFO 2020-07-19 19:48:59,859 basehttp 124 "GET /static/xadmin/css/xadmin.main.css HTTP/1.1" 304 0
+INFO 2020-07-19 19:48:59,860 basehttp 124 "GET /static/xadmin/vendor/font-awesome/css/font-awesome.css HTTP/1.1" 304 0
+INFO 2020-07-19 19:48:59,860 basehttp 124 "GET /static/xadmin/css/xadmin.responsive.css HTTP/1.1" 304 0
+INFO 2020-07-19 19:48:59,860 basehttp 124 "GET /static/xadmin/vendor/bootstrap/css/bootstrap.css HTTP/1.1" 304 0
+INFO 2020-07-19 19:48:59,888 basehttp 124 "GET /static/xadmin/css/themes/bootstrap-xadmin.css HTTP/1.1" 304 0
+INFO 2020-07-19 19:48:59,909 basehttp 124 "GET /static/xadmin/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2020-07-19 19:48:59,929 basehttp 124 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.core.js HTTP/1.1" 304 0
+INFO 2020-07-19 19:48:59,929 basehttp 124 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.widget.js HTTP/1.1" 304 0
+INFO 2020-07-19 19:48:59,931 basehttp 124 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js HTTP/1.1" 304 0
+INFO 2020-07-19 19:48:59,932 basehttp 124 "GET /static/xadmin/vendor/bootstrap/js/bootstrap.js HTTP/1.1" 304 0
+INFO 2020-07-19 19:48:59,932 basehttp 124 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js HTTP/1.1" 304 0
+INFO 2020-07-19 19:48:59,976 basehttp 124 "GET /static/xadmin/js/xadmin.main.js HTTP/1.1" 304 0
+INFO 2020-07-19 19:48:59,979 basehttp 124 "GET /static/xadmin/js/xadmin.responsive.js HTTP/1.1" 304 0
+INFO 2020-07-19 19:48:59,981 basehttp 124 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.effect.js HTTP/1.1" 304 0
+INFO 2020-07-19 19:48:59,981 basehttp 124 "GET /static/xadmin/js/xadmin.plugin.themes.js HTTP/1.1" 304 0
+INFO 2020-07-19 19:48:59,982 basehttp 124 "GET /static/xadmin/js/xadmin.plugin.portal.js HTTP/1.1" 304 0
+INFO 2020-07-19 19:49:03,913 basehttp 124 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7684
+INFO 2020-07-19 19:49:03,965 basehttp 124 "GET /static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.0.3 HTTP/1.1" 304 0
+INFO 2020-07-19 20:41:10,897 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324
+INFO 2020-07-19 20:41:11,050 basehttp 124 "GET /cart/option/ HTTP/1.1" 200 2
+INFO 2020-07-19 20:41:13,688 basehttp 124 "GET /home/nav/ HTTP/1.1" 200 324

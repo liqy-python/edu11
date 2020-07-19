@@ -32,5 +32,6 @@ urlpatterns = [
     path("course/", include("course.urls")),
     path("cart/", include("cart.urls")),
     path("ckeditor/", include("ckeditor_uploader.urls")),
+    path("order/", include("order.urls")),
 
 ]

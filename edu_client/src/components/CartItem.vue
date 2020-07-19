@@ -4,7 +4,7 @@
             <el-checkbox class="my_el_checkbox" v-model="course.selected"></el-checkbox>
         </div>
         <div class="cart_column column_2">
-            <img src="../../static/image/python.jpg" alt="">
+            <img :src="course.course_img" alt="">
             <span><router-link :to="'/course/detail/'+course.id">{{course.name}}</router-link></span>
         </div>
         <div class="cart_column column_3">
@@ -15,8 +15,7 @@
             </el-select>
         </div>
         <div class="cart_column column_4">{{course.real_price}}</div>
-<!--        <p v-for="index in course" :key="index"></p>-->
-        <div class="cart_column column_4" @click="del_cart(index)">删除</div>
+        <div class="cart_column column_4" @click="delete_course">删除</div>
 
     </div>
 </template>
@@ -25,7 +24,7 @@
     export default {
         name: "CartItem",
         //接受父组件的数据
-        props: ["course","index"],
+        props: ["course"],
         watch: {
             // 通过监测select的变化来改变当前的选中状态
             'course.selected': function () {
@@ -55,26 +54,27 @@
                     }
                 }).then(res => {
                     this.$message.success(res.data.message);
-                    console.log(res.data)
+                    this.$emit('change_expire');
                 }).catch(error => {
                     console.log(error.response);
                 })
             },
-            del_cart(index) {
+            delete_course() {
                 let token = localStorage.user_token || sessionStorage.user_token;
-                this.$axios.delete(`${this.$settings.HOST}cart/option/`, {
-                    selected: this.course.selected,
-                    course_id: this.course.id,
-                }, {
+                this.$axios({
+                    url:this.$settings.HOST+"cart/option/",
+                    method:"delete",
+                    data:{
+                        course_id:this.course.id,
+                    },
                     headers: {
                         "Authorization": "jwt " + token,
-                    }
+                    },
                 }).then(res => {
+                    this.$emit('delete_course');
                     this.$message.success(res.data.message);
-                    console.log(res.data);
-                    this.course.splice(index, 1)
                 }).catch(error => {
-                    console.log(error.response);
+                    console.log(error);
                 })
             },
 
@@ -93,6 +93,7 @@
                     // 更新切换有效期后课程的价格
                     this.course.real_price = response.data.real_price;
                     this.$message.success("切换有效期成功");
+                    this.$emit('change_expire');
                 }).catch(error => {
                     console.log(error);
                 })

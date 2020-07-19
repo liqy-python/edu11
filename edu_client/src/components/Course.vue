@@ -36,7 +36,6 @@
                     </div>
                     <div class="course-info">
                         <h3>
-                            <!--                             <router-link to="/course/detail/">{{course.name}}</router-link>-->
                             <a href="javascript:void (0)" @click="detail(course.id)">{{course.name}}</a>
                             <span><img src="/static/image/python.jpg" alt="">{{course.students}}人已加入学习</span>
                         </h3>
@@ -55,7 +54,7 @@
                             <span class="discount-type" v-if="course.discount_name">{{course.discount_name}}</span>
                             <span class="discount-price">￥{{course.real_price.toFixed(2)}}元</span>
                             <span class="original-price">原价：{{course.price}}元</span>
-                            <span class="buy-now">立即购买</span>
+                            <router-link :to="'/order'+course.id" class="buy-now">立即购买</router-link>
                         </div>
                     </div>
                 </div>

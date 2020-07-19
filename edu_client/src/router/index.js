@@ -7,6 +7,7 @@ import Course from "../components/Course";
 import CourseDetail from "../components/CourseDetail";
 import Cart from "../components/Cart";
 import CartItem from "../components/CartItem";
+import Order from "../components/Order";
 
 
 Vue.use(Router)
@@ -52,6 +53,11 @@ export default new Router({
             path: '/cartitem',
             name:"CartItem",
             component: CartItem
+        },
+        {
+            path: '/order',
+            name:"Order",
+            component: Order
         },
     ]
 })

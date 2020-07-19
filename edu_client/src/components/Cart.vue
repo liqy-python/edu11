@@ -4,7 +4,7 @@
         <div class="cart_info">
             <div class="cart_title">
                 <span class="text">我的购物车</span>
-                <span class="total">共4门课程</span>
+                <span class="total">共{{cart_list.length}}门课程</span>
             </div>
             <div class="cart_table">
                 <div class="cart_head_row">
@@ -15,13 +15,15 @@
                     <span class="do_more">操作</span>
                 </div>
                 <div class="cart_course_list">
-                    <CartItem v-for="(course,index) in cart_list" :key="index" :course="course"></CartItem>
+                    <CartItem v-for="(course,index) in cart_list" :key="index" :course="course"
+                            @delete_course="del_cart(index)" @change_expire="cart_total_price">
+                    </CartItem>
                 </div>
                 <div class="cart_footer_row">
                     <span class="cart_select"><label> <el-checkbox></el-checkbox><span>全选</span></label></span>
                     <span class="cart_delete"><i class="el-icon-delete"></i> <span>删除</span></span>
-                    <span class="goto_pay">去结算</span>
-                    <span class="cart_total">总计：¥0.0</span>
+                    <router-link to="/order" class="goto_pay">去结算</router-link>
+                    <span class="cart_total">总计：¥{{total_price}}</span>
                 </div>
             </div>
         </div>
@@ -37,11 +39,12 @@
     export default {
         name: "Cart",
         created() {
-            this.get_cart()
+            this.get_cart();
         },
         data() {
             return {
                 cart_list: [],
+                total_price: 0.00,
             }
 
         },
@@ -60,6 +63,7 @@
                 }
                 return token;
             },
+            //  获取购物车信息
             get_cart() {
                 let token = this.check_user_login();
                 this.$axios.get(`${this.$settings.HOST}cart/option/`, {
@@ -67,13 +71,34 @@
                         "Authorization": "jwt " + token,
                     }
                 }).then(res => {
-                    console.log(res.data);
                     this.cart_list = res.data;
-                    this.$store.commit("add_cart", this.cart_list.length)
+                    this.$store.commit("add_cart", this.cart_list.length);
+
+                    //  获取购物车信息成功后计算总价
+                    this.cart_total_price();
                 }).catch(error => {
                     console.log(error.response);
                 })
             },
+            //  计算总价
+            cart_total_price() {
+                let total = 0;
+                this.cart_list.forEach((course, key) => {
+                    //判断商品是否被选中     选中计算总价
+                    if (course.selected) {
+                        total += parseFloat(course.real_price)
+                    }
+                    this.total_price = total.toFixed(2);
+                })
+            },
+            //  删除购物车
+            del_cart(key){
+                this.cart_list.splice(key,1);
+                this.$store.commit('add_cart',this.cart_list.length);
+                console.log(123)
+                //  重新计算总价
+                this.cart_total_price();
+            }
 
         },
         components: {

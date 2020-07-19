@@ -27,7 +27,7 @@
                     </p>
                     <div class="buy">
                         <div class="buy-btn">
-                            <button class="buy-now">立即购买</button>
+                            <button @click="go_buy" class="buy-now">立即购买</button>
                             <button class="free">免费试学</button>
                         </div>
                         <div class="add-cart" @click="addCart"><img src="/static/image/cart.svg" alt="">加入购物车</div>
@@ -198,13 +198,14 @@
                 }).then(res => {
                     this.$message.success(res.data.message);
                     this.$store.commit("add_cart", res.data.cart_length);
-                    console.log(res.data)
-
                 }).catch(error => {
                     console.log(error.response);
-
                 })
             },
+            go_buy(){
+                this.addCart();
+                this.$router.push('/order');
+            }
         },
         components: {
             Header, Footer, videoPlayer
