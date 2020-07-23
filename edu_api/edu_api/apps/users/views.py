@@ -12,7 +12,7 @@ from edu_api.settings import constants
 from users.utils import get_user_by_account
 from users.models import UserInfo
 from users.serializers import UserModelSerializer
-from utils.send_msg import Message
+from edu_api.util.send_msg import Message
 
 pc_geetest_id = "6f91b3d2afe94ed29da03c14988fb4ef"
 pc_geetest_key = "7a01b1933685931ef5eaf5dabefd3df2"
@@ -51,12 +51,13 @@ class CaptchaAPIView(APIView):
         return Response(result)
 
 
+# 注册
 class UserAPIView(CreateAPIView):
-
     queryset = UserInfo.objects.all()
     serializer_class = UserModelSerializer
 
 
+# 注册时检验手机号
 class MobileCheckAPIView(APIView):
 
     def get(self, request, mobile):
@@ -72,6 +73,7 @@ class MobileCheckAPIView(APIView):
         return Response({"message": "ok"})
 
 
+# 注册、获取短信验证码
 class SendMessageAPIView(APIView):
 
     def get(self, request, mobile):
@@ -93,8 +95,13 @@ class SendMessageAPIView(APIView):
 
         # 4. 调用方法  完成短信的发送
         try:
-            message = Message(constants.API_KEY)
-            message.send_message(mobile, code)
+            # 通过celery异步执行发送短信的服务
+            from my_task.sms.tasks import send_sms
+            # 调用任务函数  发布任务
+            send_sms.delay(mobile, code)  # 如果需要参数则传递过去 不需要则不传递
+            # TODO 分配优惠券  发送邮件  会员等级 发送一个注册某网站成功的短信 只需将异步执行的任务发送给celery
+            # message = Message(constants.API_KEY)
+            # message.send_message(mobile, code)
         except:
             return Response({"message": "短信发送失败"}, status=http_status.HTTP_500_INTERNAL_SERVER_ERROR)
 

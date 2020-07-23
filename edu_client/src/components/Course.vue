@@ -23,7 +23,7 @@
                         <li class="price" @click="change_order_type('price')" :class="change_order_class('price')">价格
                         </li>
                     </ul>
-                    <p class="condition-result">共21个课程</p>
+                    <p class="condition-result">共{{category_list.length}}个课程</p>
                 </div>
 
             </div>
@@ -39,7 +39,7 @@
                             <a href="javascript:void (0)" @click="detail(course.id)">{{course.name}}</a>
                             <span><img src="/static/image/python.jpg" alt="">{{course.students}}人已加入学习</span>
                         </h3>
-                        <p class="teather-info">Tom 百知教育教学总监
+                        <p class="teather-info">{{course.teacher.name}} {{course.teacher.signature}}
                             <span>共{{course.lessons}}课时/{{course.lessons==course.pub_lessons?'更新完成':`已更新${course.pub_lessons}课时`}}</span>
                         </p>
 
@@ -54,7 +54,7 @@
                             <span class="discount-type" v-if="course.discount_name">{{course.discount_name}}</span>
                             <span class="discount-price">￥{{course.real_price.toFixed(2)}}元</span>
                             <span class="original-price">原价：{{course.price}}元</span>
-                            <router-link :to="'/order'+course.id" class="buy-now">立即购买</router-link>
+                            <router-link :to="'/order/'+course.id" class="buy-now">立即购买</router-link>
                         </div>
                     </div>
                 </div>
@@ -81,7 +81,10 @@
         data() {
             return {
                 category_list: [],  // 分类列表
-                course_list: [],     //  课程列表
+                course_list:[],
+                //     {
+                //     teacher: {}
+                // },                 //  课程列表
                 category: 0,
                 id: "",
                 total: 0,   //  课程总数量

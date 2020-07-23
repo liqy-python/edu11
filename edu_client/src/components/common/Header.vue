@@ -17,7 +17,7 @@
                         <span><router-link to="/cart">{{this.$store.state.cart_length}}购物车</router-link></span>
                     </div>
                     <div class="login-box full-left">
-                        <router-link to="/user/login/">个人中心</router-link>
+                        <router-link to="/order/list/">个人中心</router-link>
                         &nbsp;|&nbsp;
                         <span @click="quit">退出登录</span>
                     </div>

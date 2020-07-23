@@ -69,7 +69,7 @@ class UserModelSerializer(serializers.ModelSerializer):
         pwd = validated_data.get("password")
         hash_password = make_password(pwd)
 
-        # 处理用户名  设置默认值   随机生成字符串  手机号
+        # 处理用户名  设置默认值   随机生成字符串/采用手机号
         username = validated_data.get("phone")
 
         # 添加数据

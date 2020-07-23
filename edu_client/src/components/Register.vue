@@ -15,7 +15,6 @@
                     <button class="register_btn" @click="user_register">注册</button>
                     <p class="go_login">已有账号
                         <router-link to="/user/login/">直接登录</router-link>
-
                     </p>
                 </div>
             </div>
@@ -83,7 +82,7 @@
              // 为手机号获取验证码
             get_code() {
                 // 验证手机号格式
-                if (!/1[35689]\d{9}/.test(this.mobile)) {
+                if (!/1[3-9]\d{9}/.test(this.mobile)) {
                     this.$alert("手机号格式有误", "警告");
                     return false
                 }
@@ -99,7 +98,7 @@
                     let timer = setInterval(() => {
                         if (interval <= 1) {
                             // 停止倒计时  允许发送短信
-                            clearInterval(timer);sum++;
+                            clearInterval(timer);
                             this.sms_flag = false; // 设置允许发送短信 false
                             this.sms_text = `点击发送短信`
 
@@ -111,7 +110,7 @@
 
                 }).catch(error => {
                     console.log(error.response);
-                    this.$message.error("当前手机号已经发送过短信")
+                    this.$message.error("短信发送错误")
                 })
             },
 

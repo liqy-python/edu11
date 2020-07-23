@@ -26,7 +26,7 @@ SECRET_KEY = '11&j5*12$r6u#$lsr!o1km8yr5yd+0#&d8jm$=zvgwa#l@1v9v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['api.baizhishop.com', 'www.baizhishop.com']
+ALLOWED_HOSTS = ['api.baizhishop.com', 'www.baizhishop.com','*',]
 
 # Application definition
 
@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'course',
     'cart',
     'order',
+    'payments',
 ]
 
 MIDDLEWARE = [
@@ -280,3 +281,18 @@ KEDITOR_CONFIGS = {
 
 # 富文本上传图片的路径  为空的话代表使用django的文件上传
 CKEDITOR_UPLOAD_PATH = ''
+
+# 支付宝配置信息
+ALIAPY_CONFIG = {
+    # "gateway_url": "https://openapi.alipay.com/gateway.do?", # 真实支付宝网关地址
+    "gateway_url": "https://openapi.alipaydev.com/gateway.do?",  # 沙箱支付宝网关地址
+    "appid": "2016102200738366",
+    "app_notify_url": None,
+    "app_private_key_path": open(os.path.join(BASE_DIR, "apps/payments/keys/app_private_key.pem")).read(),
+    "alipay_public_key_path": open(os.path.join(BASE_DIR, "apps/payments/keys/alipay_public_key.pem")).read(),
+    "sign_type": "RSA2",
+    "debug": False,
+    # "return_url": "http://www.baizhistore.cn:8080/payments/result",  # 同步回调地址
+    "return_url": "http://localhost:8080/payments/result",  # 同步回调地址
+    "notify_url": "http://api.baizhistore.cn:9001/payments/result",  # 异步结果通知
+}

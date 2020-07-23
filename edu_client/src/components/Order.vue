@@ -23,7 +23,8 @@
 
                     </el-col>
                     <el-col :span="8"><span>{{course.expire_text}}</span></el-col>
-                    <el-col :span="4" class="course-price">¥{{course.real_price}}<br><span>原价:¥{{course.price}}</span></el-col>
+                    <el-col :span="4" class="course-price">¥{{course.real_price}}<br><span>原价:¥{{course.price}}</span>
+                    </el-col>
                 </el-row>
             </div>
 
@@ -32,7 +33,6 @@
                     <el-col :span="4" class="pay-col"><span class="pay-text">支付方式：</span></el-col>
                     <el-col :span="8">
                         <span class="alipay"><img src="../../static/image/alipay2.png" alt=""></span>
-                        <span class="alipay wechat"><img src="../../static/image/wechat2.png" alt=""></span>
                     </el-col>
                     <el-col :span="8" class="count">实付款： <span>¥{{real_price}}</span></el-col>
                     <el-col :span="4" class="cart-pay"><span @click="get_order">支付宝支付</span></el-col>
@@ -52,31 +52,30 @@
         components: {
             Header, Footer
         },
-        created(){
+        created() {
             this.token = this.check_user_login();
             this.get_select_course();
 
         },
-        data(){
-          return{
-              course_list:[],
-              total_price:0,
-              real_price:0,
-              token:'',
-
-          }
+        data() {
+            return {
+                course_list: [],
+                total_price: 0,
+                real_price: 0,
+                pay_type: 1,
+            }
         },
-        methods:{
-            get_select_course(){
-                this.$axios.get(`${this.$settings.HOST}cart/order/`,{
+        methods: {
+            get_select_course() {
+                let token = this.check_user_login();
+                this.$axios.get(`${this.$settings.HOST}cart/order/`, {
                     headers: {
-                        "Authorization": "jwt " +this.token,
+                        "Authorization": "jwt " + token,
                     }
                 }).then(res => {
                     this.course_list = res.data.course_list;
                     this.real_price = res.data.total_price;
                     this.$message.success(res.data.message);
-
                 }).catch(error => {
                     console.log(error.response);
                 })
@@ -97,19 +96,30 @@
             },
             //获取订单
             get_order() {
-                let token = this.token;
+                let token = this.check_user_login();
                 this.$axios.post(`${this.$settings.HOST}order/option/`, {
                     // course_id: this.course.id,
-                    pay_type:1,
-                },{
+                    pay_type: this.pay_type,
+                }, {
                     headers: {
                         "Authorization": "jwt " + token,
                     }
                 }).then(res => {
                     console.log(res.data);
-                    // this.$message.success(res.data.message);
-                    this.$router.push("/cart")
+                    this.$message.success("订单生成成功，即将跳转支付页面");
 
+                    //在订单成功后，向支付宝发起获取支付链接url
+                    this.$axios.get(`${this.$settings.HOST}payments/ali_pay/`, {
+                        params: {
+                            order_number: res.data.order_number,
+                        }
+                    }).then(res => {
+                        //返回一个支付的链接
+                        console.log(res.data);
+                        location.href = res.data;
+                    }).catch(error => {
+                        this.$message.error(error.response.data);
+                    })
                 }).catch(error => {
                     console.log(error.response);
                 })

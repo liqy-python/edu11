@@ -2,6 +2,7 @@ import requests
 from edu_api.settings import constants
 
 
+# 短信发送
 class Message(object):
 
     def __init__(self, api_key):
@@ -11,7 +12,6 @@ class Message(object):
         self.single_send_url = constants.SINGLE_SEND_URL
 
     def send_message(self, phone, code):
-
         params = {
             "apikey": self.api_key,
             'mobile': phone,

@@ -33,5 +33,6 @@ urlpatterns = [
     path("cart/", include("cart.urls")),
     path("ckeditor/", include("ckeditor_uploader.urls")),
     path("order/", include("order.urls")),
+    path("payments/", include("payments.urls")),
 
 ]

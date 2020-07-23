@@ -13,6 +13,9 @@ def jwt_response_payload_handler(token, user=None, request=None):
     }
 
 
+'''多条件登录 '''
+
+
 # 根据账号获取用户
 def get_user_by_account(account):
     try:

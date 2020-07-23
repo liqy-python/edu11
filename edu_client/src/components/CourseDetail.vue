@@ -59,7 +59,7 @@
                             <ul class="lesson-list">
                                 <li class="lesson-item" v-for="(lesson,key) in chapter.coursesections" :key="key">
                                     <p class="name"><span class="index">{{chapter.chapter}}-{{key+1}}</span>
-                                        {{lesson.name}}<span class="free">{{lesson.free_trail}}</span>
+                                        {{lesson.name}}<span class="free" v-if="lesson.free_trail">免费</span>
                                     </p>
                                     <p class="time">07:30 <img src="/static/image/chapter-player.svg"></p>
                                     <button class="try">立即试学</button>

@@ -8,16 +8,16 @@
             </div>
             <div class="login_box">
                 <div class="title">
-                    <span>密码登录</span>
-                    <span>短信登录</span>
+                    <span @click="change=true">密码登录</span>
+                    <span @click="change=false">短信登录</span>
                 </div>
-                <div class="inp" v-if="choose">
+                <div class="inp" v-if="change">
                     <input type="text" placeholder="用户名 / 手机号码" class="user" v-model="username" id="username">
                     <input type="password" name="" class="pwd" placeholder="密码" v-model="password" id="password">
                     <div id="geetest1"></div>
                     <div class="rember">
                         <p>
-                            <input type="checkbox" class="no" v-model="remember_me"/>
+                            <input type="checkbox" class="no" v-model="remember_me"/>&nbsp;&nbsp;&nbsp;&nbsp;
                             <span>记住密码</span>
                         </p>
                         <p>忘记密码</p>
@@ -30,10 +30,10 @@
                 <div class="inp" v-else>
                     <input type="text" placeholder="手机号码" class="user">
                     <div class="sms-box">
-                        <input v-model="code" type="text" maxlength="6" placeholder="输入验证码" class="user">
-                        <div class="sms-btn" @click="get_code">{{sms_text}}</div>
+                        <input v-model="code" type="text" maxlength="6" placeholder="输入验证码" class="pwd">
+                        <div class="sms-btn"><button @click="get_code">获取验证码</button></div>
                     </div>
-                    <button class="login_btn">登录</button>
+                    <button class="login_btn" @click="login">登录</button>
                     <span class="go_login">没有账号
                     <router-link to="/user/register/">立即注册</router-link>
                 </span>
@@ -54,7 +54,7 @@
                 remember_me: false,
                 sms_text: "请输入验证码",
                 sms_flag: false,
-                choose: true,
+                change:true,
             };
         },
         methods:{
@@ -88,7 +88,7 @@
 
             // 请求验证码的回调函数  完成验证码的验证
             handlerPopup(captchaObj) {
-                // 回调函数中 this指向会被改变成 所以重新赋值
+                // 回调函数中 this指向会被改变   所以重新赋值
                 let self = this;
                 captchaObj.onSuccess(function () {
                     let validate = captchaObj.getValidate();
@@ -114,7 +114,7 @@
                 document.getElementById("geetest1").innerHTML = "";
                 captchaObj.appendTo("#geetest1");
             },
-            // 用户登录的方法
+            // 用户账号密码登录的方法
             user_login() {
                 this.$axios({
                     url: this.$settings.HOST + "user/login/",
@@ -150,12 +150,6 @@
             },
             // 为手机号获取短信验证码
             get_code() {
-                // 验证手机号格式
-                if (!/1[35689]\d{9}/.test(this.mobile)) {
-                    this.$alert("手机号格式有误", "警告");
-                    return false
-                }
-
                 this.$axios({
                     url: this.$settings.HOST + "user/sms/" + `${this.mobile}`,
                     method: "get",
@@ -167,7 +161,7 @@
                     let timer = setInterval(() => {
                         if (interval <= 1) {
                             // 停止倒计时  允许发送短信
-                            clearInterval(timer);sum++;
+                            clearInterval(timer);
                             this.sms_flag = false; // 设置允许发送短信 false
                             this.sms_text = `点击发送短信`
 
@@ -180,6 +174,40 @@
                 }).catch(error => {
                     console.log(error.response);
                     this.$message.error("当前手机号已经发送过短信")
+                })
+            },
+            // 用户短信登录的方法
+            login() {
+                this.$axios({
+                    url: this.$settings.HOST + "user/sms_login/",
+                    method: "post",
+                    data: {
+                        phone: this.mobile,
+                        sms_code: this.code,
+                    }
+                }).then(response => {
+                    console.log(response.data);
+                    if (this.remember_me) {
+                        // 为True代表需要记住密码  将用户信息记录到localStorage
+                        // 需要将sessionStorage中的用户信息删除
+                        localStorage.user_token = response.data.token;
+                        localStorage.username = response.data.username;
+                        localStorage.user_id = response.data.user_id;
+                        sessionStorage.clear();
+                    } else {
+                        // 代表用户不需要记住密码  则将已保存的用户信息删除
+                        // 用户不需要记住我时  将localStorage中的记录的用户信息删除
+                        localStorage.clear();
+                        sessionStorage.user_token = response.data.token;
+                    }
+                    this.$message({
+                        message: '恭喜你，登录成功',
+                        type: 'success'
+                    });
+                    // 登录成功后返回首页
+                    this.$router.push("/");
+                }).catch(error => {
+                    this.$message.error("用户名或密码错误");
                 })
             },
 
